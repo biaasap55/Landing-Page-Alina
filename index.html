@@ -12,8 +12,8 @@
 <style>
 :root{
   --bone:#F4EFE4; --oat:#E7DBC6; --shell:#FBF8F1;
-  --espresso:#1A140E; --ink:#2E251D; --soft:#55483D;
-  --gold:#8A6327; --gold-lt:#D8B273; --clay:#B9825F;
+  --espresso:#4A3728; --ink:#5C4A3A; --soft:#7A6A56;
+  --gold:#8B6F45; --gold-lt:#C9A96E; --clay:#B9825F;
   --line:rgba(30,23,16,.15); --hair:rgba(30,23,16,.09);
   --disp:'Fraunces',Georgia,serif;
   --sans:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
@@ -39,8 +39,17 @@ a{color:inherit}
 .sec-sm{padding-top:clamp(1.9rem,4.6vw,2.9rem);padding-bottom:clamp(1.9rem,4.6vw,2.9rem)}
 .bg-shell{background:var(--shell)}
 .bg-oat{background:var(--oat)}
-.bg-dark{background:#241C14;color:#F0E8DA}
-.bg-dark h2,.bg-dark h3{color:#F3ECE0}
+.bg-dark{background:#D9CCBB;color:var(--ink)}
+.bg-dark h2,.bg-dark h3{color:var(--espresso)}
+.bg-dbrown{background:#241C14;color:#F0E8DA}
+.bg-dbrown h2,.bg-dbrown h3{color:#F3ECE0}
+.bg-dbrown .lead{color:#F3ECE0}
+.bg-dbrown .copy p{color:rgba(240,232,218,.93)}
+.bg-dbrown .addr-l{color:var(--gold-lt)}
+.bg-dbrown .btn{background:#D9CCBB;border-color:#D9CCBB;color:#241C14}
+.bg-dbrown .btn:hover{background:#fff;border-color:#fff}
+.bg-dbrown .btn-line{background:transparent;color:#F0E8DA;border:1.5px solid rgba(240,232,218,.55)}
+.bg-dbrown .btn-line:hover{background:#F0E8DA;color:#241C14;border-color:#F0E8DA}
 .hr{height:1px;background:var(--line);border:0;margin:0}
 .motif{position:absolute;pointer-events:none;z-index:0;color:var(--gold);opacity:.085;
   width:clamp(16rem,42vw,30rem);height:auto}
@@ -54,32 +63,32 @@ section>.wrap{position:relative;z-index:1}
 h1{font-size:clamp(2.5rem,1.5rem + 4.2vw,4rem);letter-spacing:-.03em;line-height:1.05;font-weight:400}
 h2{font-size:clamp(1.78rem,1.3rem + 2.05vw,2.6rem);letter-spacing:-.02em}
 h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-height:1.26}
-.addr-l{font-weight:500;font-size:.9rem;letter-spacing:.02em;color:var(--gold-lt);margin:0 0 .35rem}
+.addr-l{font-weight:500;font-size:.9rem;letter-spacing:.02em;color:var(--gold);margin:0 0 .35rem}
 .lead{font-size:clamp(1.17rem,1.08rem + .55vw,1.38rem);line-height:1.52;color:var(--espresso);font-weight:300}
-.bg-dark .lead{color:#F3ECE0}
+.bg-dark .lead{color:var(--espresso)}
 .copy p{color:var(--ink);max-width:36em}
-.bg-dark .copy p{color:rgba(240,232,218,.93)}
+.bg-dark .copy p{color:var(--ink)}
 .quote{font-family:var(--disp);font-style:italic;font-weight:300;
   font-size:clamp(1.08rem,1rem + .62vw,1.42rem);line-height:1.42;color:var(--espresso)}
-.bg-dark .quote{color:#F3ECE0}
+.bg-dark .quote{color:var(--espresso)}
 
 /* ---- buttons: squared, editorial ---- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;
   font-family:var(--sans);font-weight:400;font-size:.795rem;letter-spacing:.13em;
   text-transform:uppercase;text-decoration:none;cursor:pointer;
   padding:1.12rem 2rem;border:1px solid #33261A;border-radius:999px;
-  background:#33261A;color:#FBF8F1;min-height:54px;text-align:center;
+  background:#5C4A3A;color:#FBF8F1;min-height:54px;text-align:center;
   box-shadow:0 1px 2px rgba(26,20,14,.14);
   transition:background .3s,color .3s,border-color .3s,box-shadow .3s}
-.btn:hover{background:#46341F;border-color:#46341F;box-shadow:0 4px 14px rgba(26,20,14,.2)}
+.btn:hover{background:#4A3728;border-color:#4A3728;box-shadow:0 4px 14px rgba(74,55,40,.25)}
 .btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .btn svg{width:13px;height:13px;flex:0 0 auto}
-.btn-line{background:transparent;color:#33261A;border:1.5px solid #33261A;box-shadow:none}
+.btn-line{background:transparent;color:#5C4A3A;border:1.5px solid #5C4A3A;box-shadow:none}
 .btn-line:hover{background:var(--espresso);color:var(--bone);border-color:var(--espresso)}
-.bg-dark .btn{background:var(--bone);border-color:var(--bone);color:#33261A}
-.bg-dark .btn:hover{background:#fff;border-color:#fff}
-.bg-dark .btn-line{background:transparent;color:#F0E8DA;border:1.5px solid rgba(240,232,218,.55)}
-.bg-dark .btn-line:hover{background:#F0E8DA;color:#33261A;border-color:#F0E8DA}
+.bg-dark .btn{background:#5C4A3A;border-color:#5C4A3A;color:#FBF8F1}
+.bg-dark .btn:hover{background:#4A3728;border-color:#4A3728}
+.bg-dark .btn-line{background:transparent;color:#5C4A3A;border:1.5px solid #5C4A3A}
+.bg-dark .btn-line:hover{background:#5C4A3A;color:#FBF8F1;border-color:#5C4A3A}
 .cta{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
 .cta .btn{width:100%}
 .cta-center{justify-content:center}
@@ -301,13 +310,18 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 .bens .b-more-in{padding:0 0 1.25rem 2.5rem;color:var(--soft);font-size:.97rem;max-width:44em}
 .bens .b-more-in p{margin-bottom:.65rem}
 
-/* ---- services ---- */
-.svcs{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 1rem;margin-top:1.8rem}
-.svcs article>img,.svcs article>.slot{width:100%;aspect-ratio:4/5;object-fit:cover;margin-bottom:.85rem;border-radius:10px}
-.svcs h3{font-size:1.12rem;margin-bottom:.35rem}
+/* ---- services: horizontal scroll on mobile, 4-col grid on desktop ---- */
+.svcs{display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:1rem;
+  overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  margin-top:1.8rem;margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad);padding-bottom:.3rem}
+.svcs::-webkit-scrollbar{display:none}
+.svcs article{scroll-snap-align:center;min-width:0}
+.svcs article>img{width:100%;aspect-ratio:4/5;object-fit:cover;margin-bottom:.85rem;border-radius:10px}
+.svcs h3{font-size:1.12rem;margin-bottom:.35rem;font-weight:500;letter-spacing:.04em}
 .svcs p{color:var(--ink);font-size:.95rem;line-height:1.55;margin:0}
 @media(min-width:760px){
-  .svcs{grid-template-columns:repeat(3,1fr);gap:1.8rem 1.3rem}
+  .svcs{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);grid-auto-columns:auto;
+    overflow:visible;margin-inline:0;padding-inline:0;gap:1.5rem}
   .svcs p{font-size:1rem}
 }
 
@@ -359,6 +373,9 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 .rv{opacity:0;transform:translateY(12px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+.brush-ul{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8c30-6 60 2 90-2s60-4 90 0 60 4 90-1 25-3 26-2' fill='none' stroke='%238B6F45' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:repeat-x;background-position:0 100%;background-size:100% .35em;
+  padding-bottom:.2em}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 </style>
 </head>
@@ -417,7 +434,7 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
       <div class="copy" style="margin-top:.9rem">
         <p>În cadrul consultației inițiale gratuite, analizăm nevoile părului tău, discutăm despre culoarea și tunsoarea care ți se potrivesc și construim împreună o soluție adaptată stilului tău de viață.</p>
       </div>
-      <p class="quote" style="margin-top:1.5rem;border-left:2px solid var(--gold-lt);padding-left:1.3rem;font-size:clamp(1.12rem,1.04rem + .65vw,1.48rem);font-weight:500;font-style:normal">Scopul nostru este să pleci nu doar cu un look frumos, ci cu <span style="text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:.25em;text-decoration-thickness:1.5px">unul în care te regăsești.</span></p>
+      <p class="quote" style="margin-top:1.5rem;border-left:2px solid var(--gold-lt);padding-left:1.3rem;font-family:var(--disp);font-size:clamp(1.12rem,1.04rem + .65vw,1.48rem);font-weight:500;font-style:normal;letter-spacing:.04em">Scopul nostru este să pleci nu doar cu un look frumos, ci cu <span class="brush-ul">unul în care te regăsești.</span></p>
     </div>
   </div>
 </section>
@@ -453,14 +470,6 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 
     <div class="ba-grid rv" id="baGrid"></div>
 
-    <div class="rv" style="margin-top:2.1rem">
-      <div class="rail" aria-label="Rezultate recente">
-        <figure><img src="img/rezultat-saten.jpg" width="761" height="1014" alt="Șaten cald și luminos, cu reflexii naturale" loading="lazy" decoding="async"></figure>
-        <figure><img src="img/rezultat-blond.jpg" width="561" height="702" alt="Blond cald, cu tranziție naturală de la rădăcină" loading="lazy" decoding="async"></figure>
-        <figure><img src="img/rezultat-rosu.jpg" width="543" height="662" alt="Roșu intens și profund, cu reflexii" loading="lazy" decoding="async"></figure>
-        <figure><img src="img/rezultat-bronde.jpg" width="543" height="724" alt="Bronde cu reflexii luminoase pe lungimi" loading="lazy" decoding="async"></figure>
-      </div>
-    </div>
 
     <div class="cta cta-center rv">
       <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Programează o consultație gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
@@ -504,34 +513,24 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
     </div>
     <div class="svcs rv">
       <article>
-        <img src="img/rezultat-bronde.jpg" width="543" height="724" alt="Colorare organică NATULIQUE — nuanțe calde, naturale" loading="lazy" decoding="async">
+        <img src="img/rezultat-saten.jpg" width="761" height="1014" alt="Colorare organică — șaten cald și luminos" loading="lazy" decoding="async">
         <h3>Colorare organică</h3>
         <p>Colorare permanentă fără amoniac, cu ingrediente de origine naturală și organică certificată.</p>
       </article>
       <article>
-        <img src="img/rezultat-saten.jpg" width="761" height="1014" alt="Acoperirea firelor albe — culoare uniformă pe toată lungimea" loading="lazy" decoding="async" style="object-position:50% 25%">
-        <h3>Acoperirea firelor albe</h3>
-        <p>Culoare uniformă și de durată, cu o tehnică aleasă în funcție de starea părului tău.</p>
-      </article>
-      <article>
-        <img src="img/rezultat-bronde.jpg" width="543" height="724" alt="Balayage și nuanțare — reflexii luminoase pe lungimi" loading="lazy" decoding="async" style="object-position:50% 22%">
+        <img src="img/rezultat-blond.jpg" width="561" height="702" alt="Balayage — blond cald cu tranziție naturală" loading="lazy" decoding="async">
         <h3>Balayage &amp; nuanțare</h3>
         <p>Reflexii luminoase, profunzime și nuanțe care îți pun în valoare frumusețea naturală.</p>
       </article>
       <article>
-        <img src="img/rezultat-rosu.jpg" width="543" height="662" alt="Schimbare de nuanță — roșu intens, cu reflexii" loading="lazy" decoding="async" style="object-position:50% 30%">
+        <img src="img/rezultat-rosu.jpg" width="543" height="662" alt="Schimbare de nuanță — roșu intens și profund" loading="lazy" decoding="async">
         <h3>Schimbări de nuanță</h3>
         <p>Îți explicăm de la început ce este posibil și în câte etape ajungem la culoarea dorită.</p>
       </article>
       <article>
-        <img src="img/detaliu-luciu.jpg" width="900" height="560" alt="Tunsoare personalizată — formă și contur modelate pe trăsături" loading="lazy" decoding="async">
-        <h3>Tunsori personalizate</h3>
-        <p>O tunsoare care îți pune în valoare trăsăturile, textura părului și noua culoare.</p>
-      </article>
-      <article>
-        <img src="img/produs-detaliu.jpg" width="561" height="595" alt="Tratamente naturale profesionale pentru îngrijirea părului" loading="lazy" decoding="async">
-        <h3>Îngrijirea părului</h3>
-        <p>Tratamente profesionale pentru hidratare, întărire și disciplinarea firelor rebele.</p>
+        <img src="img/rezultat-bronde.jpg" width="543" height="724" alt="Acoperirea firelor albe — bronde luminos" loading="lazy" decoding="async">
+        <h3>Acoperirea firelor albe</h3>
+        <p>Culoare uniformă și de durată, cu o tehnică aleasă în funcție de starea părului tău.</p>
       </article>
     </div>
   </div>
@@ -602,7 +601,7 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 </section>
 
 <!-- 10 — TE AȘTEPTĂM ÎN SALON -->
-<section class="sec bg-dark" id="salon">
+<section class="sec bg-dbrown" id="salon">
   <div class="wrap split split-5-7 rv" style="align-items:center">
     <div class="fig">
       <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.5!2d26.0833!3d44.4567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU3RyLiBNxINyxINyZXN0aSAzNSwgYXAuIDIsIEJ1Y2hhcmVzdA!5e0!3m2!1sro!2sro!4v1700000000000" style="border:0;border-radius:10px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -613,13 +612,13 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
       <div class="copy" style="margin-top:.9rem">
         <p>Te așteptăm la Alina Cotta Beauty Lounge, într-un spațiu intim, în care fiecare clientă beneficiază de atenție deplină și de timp dedicat.</p>
       </div>
-      <div style="margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid rgba(232,223,208,.18)">
+      <div style="margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid rgba(240,232,218,.18)">
         <p class="addr-l">Adresă</p>
         <p style="margin:0;color:rgba(240,232,218,.93)">Str. Mărăști 35, ap. 2, București, România 011463</p>
       </div>
       <div class="cta">
         <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Programează o consultație gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-line" id="navBtn" href="https://www.google.com/maps/search/?api=1&amp;query=Str.+Marasti+35+ap.+2+Bucharest+Romania+011463" target="_blank" rel="noopener" style="border-color:rgba(232,223,208,.3);color:#E8DFD0">Vezi cum ajungi la noi</a>
+        <a class="btn btn-line" id="navBtn" href="https://www.google.com/maps/search/?api=1&amp;query=Str.+Marasti+35+ap.+2+Bucharest+Romania+011463" target="_blank" rel="noopener">Vezi cum ajungi la noi</a>
       </div>
     </div>
   </div>
