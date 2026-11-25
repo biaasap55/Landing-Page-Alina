@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alina Cotta Beauty Lounge — Colorare organică fără amoniac</title>
+<meta name="description" content="Colorare organică NATULIQUE fără amoniac, în București. Consultație inițială gratuită, plan personalizat și grijă pentru sănătatea părului tău pe termen lung.">
+<meta name="theme-color" content="#F4EFE4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..500;1,9..144,300&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4EFE4; --oat:#E7DBC6; --shell:#FBF8F1;
+  --espresso:#4A3728; --ink:#5C4A3A; --soft:#7A6A56;
+  --gold:#8B6F45; --gold-lt:#C9A96E; --clay:#B9825F;
+  --line:rgba(30,23,16,.15); --hair:rgba(30,23,16,.09);
+  --disp:'Fraunces',Georgia,serif;
+  --sans:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --pad:clamp(1.2rem,5vw,2.25rem);
+  --sec:clamp(2.7rem,6.6vw,4.3rem);
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bone);color:var(--ink);
+  font-family:var(--sans);font-weight:300;
+  font-size:clamp(1.06rem,1.0rem + .42vw,1.165rem);line-height:1.68;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;font-family:var(--disp);font-weight:400;color:var(--espresso);
+  line-height:1.1;letter-spacing:.04em;font-variation-settings:'opsz' 120,'SOFT' 0,'WONK' 0}
+p{margin:0 0 .9em}p:last-child{margin-bottom:0}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.sec{padding-top:var(--sec);padding-bottom:var(--sec)}
+.sec-sm{padding-top:clamp(1.9rem,4.6vw,2.9rem);padding-bottom:clamp(1.9rem,4.6vw,2.9rem)}
+.bg-shell{background:var(--shell)}
+.bg-oat{background:var(--oat)}
+.bg-dbrown{background:#5C4A3A;color:#F0E8DA}
+.bg-dbrown h2,.bg-dbrown h3{color:#F3ECE0}
+.bg-dbrown .lead{color:#F3ECE0}
+.bg-dbrown .copy p{color:rgba(240,232,218,.93)}
+.bg-dbrown .addr-l{color:var(--gold-lt)}
+.bg-dbrown .btn{background:#D9CCBB;border-color:#D9CCBB;color:#241C14}
+.bg-dbrown .btn:hover{background:#fff;border-color:#fff}
+.bg-dbrown .btn-line{background:transparent;color:#F0E8DA;border:1.5px solid rgba(240,232,218,.55)}
+.bg-dbrown .btn-line:hover{background:#F0E8DA;color:#241C14;border-color:#F0E8DA}
+.hr{height:1px;background:var(--line);border:0;margin:0}
+.motif{position:absolute;pointer-events:none;z-index:0;color:var(--gold);opacity:.085;
+  width:clamp(16rem,42vw,30rem);height:auto}
+.motif-r{right:-7rem;top:-4rem}
+.motif-l{left:-8rem;bottom:-5rem}
+section{position:relative}
+.has-motif{position:relative;overflow:hidden}
+section>.wrap{position:relative;z-index:1}
+
+/* ---- type ---- */
+h1{font-size:clamp(2.5rem,1.5rem + 4.2vw,4rem);letter-spacing:-.03em;line-height:1.05;font-weight:400}
+h2{font-size:clamp(1.78rem,1.3rem + 2.05vw,2.6rem);letter-spacing:-.02em}
+h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-height:1.26}
+.addr-l{font-weight:500;font-size:.9rem;letter-spacing:.02em;color:var(--gold);margin:0 0 .35rem}
+.lead{font-size:clamp(1.17rem,1.08rem + .55vw,1.38rem);line-height:1.52;color:var(--espresso);font-weight:300}
+.copy p{color:var(--ink);max-width:36em}
+.quote{font-family:var(--disp);font-style:italic;font-weight:300;
+  font-size:clamp(1.08rem,1rem + .62vw,1.42rem);line-height:1.42;color:var(--espresso)}
+
+/* ---- buttons: squared, editorial ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;
+  font-family:var(--sans);font-weight:400;font-size:.795rem;letter-spacing:.13em;
+  text-transform:uppercase;text-decoration:none;cursor:pointer;
+  padding:1.12rem 2rem;border:1px solid #33261A;border-radius:999px;
+  background:#5C4A3A;color:#FBF8F1;min-height:54px;text-align:center;
+  box-shadow:0 1px 2px rgba(26,20,14,.14);
+  transition:background .3s,color .3s,border-color .3s,box-shadow .3s}
+.btn:hover{background:#4A3728;border-color:#4A3728;box-shadow:0 4px 14px rgba(74,55,40,.25)}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn svg{width:13px;height:13px;flex:0 0 auto}
+.btn-line{background:transparent;color:#5C4A3A;border:1.5px solid #5C4A3A;box-shadow:none}
+.btn-line:hover{background:var(--espresso);color:var(--bone);border-color:var(--espresso)}
+.cta{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+.cta .btn{width:100%}
+.cta-center{justify-content:center}
+.cta-center .btn{margin-inline:auto}
+@media(min-width:620px){.cta .btn{width:auto;min-width:19rem}}
+@media(max-width:430px){.btn{font-size:.715rem;letter-spacing:.08em;padding:1.05rem 1.1rem}.btn svg{width:13px;height:13px}}
+
+/* ---- header ---- */
+.head{position:sticky;top:0;z-index:60;background:rgba(244,239,228,.93);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding-top:.7rem;padding-bottom:.7rem}
+.brand{text-decoration:none;display:flex;flex-direction:column;justify-content:center;
+  min-height:44px;line-height:1}
+.brand b{font-family:var(--sans);font-weight:400;font-size:.95rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--espresso)}
+.brand span{font-family:var(--sans);font-weight:300;font-size:.6rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--soft);margin-top:.34rem}
+.nav{display:none}
+@media(min-width:960px){
+  .nav{display:flex;gap:1.65rem;align-items:center}
+  .nav a{font-size:.9rem;letter-spacing:.01em;text-decoration:none;
+    color:var(--ink);transition:color .25s}
+  .nav a:hover{color:var(--espresso)}
+}
+.head .btn{padding:.68rem 1.05rem;font-size:.7rem;letter-spacing:.05em;min-height:44px;white-space:nowrap}
+.head .btn .full{display:none}
+@media(min-width:720px){
+  .head .btn{padding:.76rem 1.35rem;font-size:.74rem;min-height:0}
+  .head .btn .full{display:inline}
+  .head .btn .short{display:none}
+}
+
+/* ---- hero ---- */
+.hero{padding-top:clamp(1.5rem,4vw,2.7rem);padding-bottom:0}
+.hero-g{display:grid;gap:clamp(1.3rem,3.6vw,2.2rem)}
+.hero h1{margin-bottom:1rem}
+.hero-fig{position:relative;margin:0}
+.hero-fig img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:14px;box-shadow:0 2px 24px rgba(26,20,14,.07)}
+.hero-sig{display:flex;align-items:flex-start;gap:.8rem;margin-top:1.5rem;
+  font-size:.875rem;letter-spacing:.02em;color:var(--ink);line-height:1.5}
+.hero-sig span{width:2rem;height:1px;background:var(--gold);flex:0 0 auto;margin-top:.62em}
+@media(min-width:900px){
+  .hero-g{grid-template-columns:7fr 5fr;gap:clamp(2rem,4.5vw,3.6rem);align-items:center}
+  .hero-fig img{aspect-ratio:4/5;object-position:50% 25%}
+  .hero{padding-bottom:clamp(1.4rem,3vw,2.2rem)}
+}
+
+/* ---- cifre: marquee band ---- */
+.strip{background:#241C14;overflow:hidden;position:relative}
+.strip::before,.strip::after{content:"";position:absolute;top:0;bottom:0;width:4.5rem;z-index:2;pointer-events:none}
+.strip::before{left:0;background:linear-gradient(90deg,#241C14,rgba(36,28,20,0))}
+.strip::after{right:0;background:linear-gradient(270deg,#241C14,rgba(36,28,20,0))}
+.ticker{display:flex;width:max-content;animation:slide 42s linear infinite;will-change:transform}
+.strip:hover .ticker{animation-play-state:paused}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tick-set{display:flex;flex:0 0 auto}
+.tick-i{display:flex;align-items:baseline;gap:.6rem;padding:1.15rem 0;white-space:nowrap}
+.tick-i b{font-family:var(--disp);font-weight:300;font-size:1.3rem;color:#F0E8DA;letter-spacing:-.015em}
+.tick-i i{font-style:normal;font-size:.9rem;color:rgba(240,232,218,.78)}
+.tick-i::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold-lt);
+  opacity:.8;margin:0 1.9rem;align-self:center;flex:0 0 auto}
+@media(prefers-reduced-motion:reduce){
+  .strip::before,.strip::after{display:none}
+  .ticker{animation:none;width:100%;justify-content:center;flex-wrap:wrap}
+  .tick-set:last-child{display:none}
+  .tick-set{flex-wrap:wrap;justify-content:center}
+  .tick-i{padding:.65rem 0}
+}
+
+/* ---- editorial split ---- */
+.split{display:grid;gap:clamp(1.4rem,3.8vw,2.2rem);align-items:center}
+@media(min-width:900px){
+  .split{grid-template-columns:1fr 1fr;gap:clamp(2rem,4.6vw,3.6rem)}
+  .split-7-5{grid-template-columns:7fr 5fr}
+  .split-5-7{grid-template-columns:5fr 7fr}
+  .split.flip>.fig{order:2}
+  .split .fig img{max-height:min(64vh,540px)}
+  #organic .fig .vid-box{max-height:min(72vh,560px)}
+}
+.fig{margin:0}
+.fig img{width:100%;object-fit:cover;border-radius:10px}
+.fig figcaption{font-size:.83rem;letter-spacing:.01em;color:var(--soft);margin-top:.7rem}
+.r-45 img{aspect-ratio:4/5}
+.r-32 img{aspect-ratio:3/2}
+.r-11 img{aspect-ratio:1/1}
+
+/* ---- asset slots ---- */
+.slot{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.5rem;text-align:center;padding:1.3rem 1.1rem;min-width:0;overflow:hidden;
+  background-color:var(--oat);
+  background-image:repeating-linear-gradient(135deg,rgba(156,118,55,.08) 0 1px,transparent 1px 12px);
+  border:1px solid rgba(138,99,39,.3);border-radius:10px;color:var(--soft)}
+.slot svg{width:24px;height:24px;color:var(--gold);opacity:.65}
+.slot b{font-weight:500;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold);max-width:100%}
+.slot span{font-family:var(--disp);font-style:italic;font-size:.98rem;line-height:1.4;
+  max-width:min(24rem,100%);color:var(--soft)}
+.slot-note{font-size:.86rem;line-height:1.6;letter-spacing:.01em;color:var(--soft);margin-top:.7rem}
+
+/* ---- roadmap ---- */
+.road{list-style:none;margin:1.7rem 0 0;padding:0;border-top:1px solid var(--line)}
+.road>li{display:grid;grid-template-columns:3.1rem 1fr;gap:1rem;
+  padding:1.3rem 0;border-bottom:1px solid var(--line);align-items:start;
+  opacity:0;transform:translateY(22px);
+  transition:opacity .72s cubic-bezier(.22,.7,.3,1),transform .72s cubic-bezier(.22,.7,.3,1)}
+.road>li.in{opacity:1;transform:none}
+.road .n{transition:opacity .9s ease .12s,transform .9s cubic-bezier(.22,.7,.3,1) .12s;
+  opacity:0;transform:translateY(10px)}
+.road>li.in .n{opacity:1;transform:none}
+.road-t>*{opacity:0;transform:translateY(12px);
+  transition:opacity .68s ease,transform .68s cubic-bezier(.22,.7,.3,1)}
+.road>li.in .road-t>h3{opacity:1;transform:none;transition-delay:.1s}
+.road>li.in .road-t>p{opacity:1;transform:none;transition-delay:.19s}
+@media(prefers-reduced-motion:reduce){
+  .road>li,.road .n,.road-t>*{opacity:1!important;transform:none!important}
+}
+.road-t{min-width:0}
+.road .n{font-family:var(--disp);font-weight:200;font-size:1.75rem;line-height:.9;
+  color:var(--gold);padding-top:.1rem;font-variation-settings:'opsz' 144}
+.road h3{margin-bottom:.42rem}
+.road p{color:var(--ink);font-size:1.03rem;max-width:40em}
+@media(min-width:900px){
+  .road>li{grid-template-columns:4.5rem 1fr;gap:1.8rem}
+  .road-t{display:grid;grid-template-columns:1fr 1.15fr;gap:1.8rem;align-items:start}
+  .road .n{font-size:2.3rem}
+  .road h3{margin-bottom:0}
+}
+
+/* ---- before / after ---- */
+.ba-grid{display:grid;gap:clamp(1.3rem,3.4vw,2rem);margin-top:1.8rem}
+.ba-grid>figure{display:grid;grid-template-rows:auto 1fr;margin:0}
+@media(min-width:860px){.ba-grid{grid-template-columns:1fr 1fr}
+  .ba-grid>figure{grid-row:span 2;grid-template-rows:subgrid}
+  .ba-grid{grid-auto-rows:auto}}
+.ba{position:relative;overflow:hidden;user-select:none;touch-action:pan-y;
+  background:var(--oat);aspect-ratio:4/5;border-radius:10px}
+.ba-pane{position:absolute;inset:0}
+.ba-pane>img{width:100%;height:100%;object-fit:cover}
+.ba-top{clip-path:inset(0 0 0 50%)}
+.ba-slot{display:flex;flex-direction:column;justify-content:flex-end;gap:.35rem;
+  width:100%;height:100%;padding:1rem 1rem 1.2rem}
+.ba-bottom .ba-slot{align-items:flex-start;text-align:left}
+.ba-top .ba-slot{align-items:flex-end;text-align:right}
+.ba-slot b{font-weight:400;font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.ba-slot span{font-family:var(--disp);font-style:italic;font-size:.82rem;line-height:1.3;
+  color:var(--soft);max-width:10rem}
+.ba-slot svg{width:20px;height:20px;color:var(--gold);opacity:.55}
+.sl-b{background-color:#DCCDB2;background-image:repeating-linear-gradient(135deg,rgba(30,23,16,.05) 0 1px,transparent 1px 12px)}
+.sl-a{background-color:#F7F2E8;background-image:repeating-linear-gradient(135deg,rgba(156,118,55,.09) 0 1px,transparent 1px 12px)}
+.ba-tag{position:absolute;top:.7rem;font-family:var(--sans);font-size:.55rem;letter-spacing:.2em;
+  text-transform:uppercase;background:rgba(30,23,16,.76);color:#F3ECE0;padding:.33rem .6rem}
+.ba-tag.l{left:.7rem}.ba-tag.r{right:.7rem}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:rgba(247,242,232,.92);
+  transform:translateX(-1px);cursor:ew-resize}
+.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:42px;height:42px;border-radius:50%;background:var(--bone);border:1px solid rgba(156,118,55,.5);
+  display:flex;align-items:center;justify-content:center;color:var(--gold);
+  box-shadow:0 2px 12px rgba(30,23,16,.2)}
+.ba-knob svg{width:17px;height:17px}
+.ba:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.ba-meta{margin-top:.95rem;display:grid;grid-template-columns:6rem 1fr;gap:.5rem .9rem}
+.ba-meta dt{font-size:.76rem;letter-spacing:.03em;color:var(--gold-lt);
+  display:flex;align-items:center;margin:0}
+.ba-meta dd{margin:0;font-size:.96rem;line-height:1.5;color:var(--soft);
+  display:flex;align-items:center;min-height:1.5em}
+.pend{font-family:var(--disp);font-style:italic;font-size:.9rem;color:rgba(240,232,218,.55)}
+.ba-real .ba-tag{background:rgba(26,20,14,.62);backdrop-filter:blur(3px)}
+
+/* ---- results rail ---- */
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:64%;gap:.65rem;
+  overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad);padding-bottom:.3rem}
+.rail::-webkit-scrollbar{display:none}
+.rail>figure{margin:0;scroll-snap-align:center}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px}
+@media(min-width:760px){
+  .rail{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);grid-auto-columns:auto;
+    overflow:visible;margin-inline:0;padding-inline:0;gap:.7rem}
+  .rail>figure:nth-child(even){margin-top:1.6rem}
+}
+
+/* ---- check-list (clean, non-expandable) ---- */
+.check-list{list-style:none;margin:0;padding:0}
+.check-list li{display:flex;align-items:flex-start;gap:.85rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.check-list li:first-child{border-top:1px solid var(--line)}
+.check-list .tick{width:20px;height:20px;flex:0 0 auto;color:var(--gold);margin-top:.18rem}
+.check-list span{font-size:1.01rem;line-height:1.52;color:var(--ink)}
+.check-list b{font-weight:500;color:var(--espresso)}
+
+/* ---- benefits: video + ticked rows ---- */
+.vid-box{position:relative;width:100%;aspect-ratio:4/5;border-radius:10px;overflow:hidden;
+  background-color:var(--oat);
+  background-image:repeating-linear-gradient(135deg,rgba(138,99,39,.08) 0 1px,transparent 1px 12px);
+  border:1px solid rgba(138,99,39,.3)}
+.vid-box video{width:100%;height:100%;object-fit:cover;display:block}
+.bens{margin-top:1.5rem;border-top:1px solid var(--line)}
+.bens details{border-bottom:1px solid var(--line)}
+.bens summary{list-style:none;cursor:pointer;display:grid;
+  grid-template-columns:auto 1fr auto;gap:.85rem;align-items:start;
+  padding:1.05rem 0;min-height:48px}
+.bens summary::-webkit-details-marker{display:none}
+.bens summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.bens .tick{width:19px;height:19px;flex:0 0 auto;color:var(--gold);margin-top:.22rem}
+.bens .b-txt{font-size:1.01rem;line-height:1.52;color:var(--ink)}
+.bens .b-txt b{font-weight:500;color:var(--espresso)}
+.bens .ic{position:relative;width:13px;height:13px;flex:0 0 auto;color:var(--gold);margin-top:.42rem}
+.bens .ic::before,.bens .ic::after{content:"";position:absolute;background:currentColor;transition:transform .3s}
+.bens .ic::before{top:6px;left:0;width:13px;height:1px}
+.bens .ic::after{left:6px;top:0;height:13px;width:1px}
+.bens details[open] .ic::after{transform:scaleY(0)}
+.bens .b-more{overflow:hidden}
+.bens .b-more-in{padding:0 0 1.25rem 2.5rem;color:var(--soft);font-size:.97rem;max-width:44em}
+.bens .b-more-in p{margin-bottom:.65rem}
+
+/* ---- services: horizontal scroll on mobile, 4-col grid on desktop ---- */
+.svcs{display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:1rem;
+  overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  margin-top:1.8rem;margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad);padding-bottom:.3rem}
+.svcs::-webkit-scrollbar{display:none}
+.svcs article{scroll-snap-align:center;min-width:0}
+.svcs article>img{width:100%;aspect-ratio:4/5;object-fit:cover;margin-bottom:.85rem;border-radius:10px}
+.svcs h3{font-size:1.12rem;margin-bottom:.35rem;font-weight:500;letter-spacing:.04em}
+.svcs p{color:var(--ink);font-size:.95rem;line-height:1.55;margin:0}
+@media(min-width:760px){
+  .svcs{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);grid-auto-columns:auto;
+    overflow:visible;margin-inline:0;padding-inline:0;gap:1.5rem}
+  .svcs p{font-size:1rem}
+}
+
+/* ---- testimonials: infinite horizontal scroll ---- */
+.tests-wrap{overflow:hidden;position:relative;margin-top:1.8rem}
+.tests-wrap::before,.tests-wrap::after{content:"";position:absolute;top:0;bottom:0;width:3rem;z-index:2;pointer-events:none}
+.tests-wrap::before{left:0;background:linear-gradient(90deg,var(--bone),rgba(244,239,228,0))}
+.tests-wrap::after{right:0;background:linear-gradient(270deg,var(--bone),rgba(244,239,228,0))}
+.tests{display:flex;width:max-content;animation:scrollTests 55s linear infinite;will-change:transform}
+.tests:hover{animation-play-state:paused}
+@keyframes scrollTests{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.testi{flex:0 0 auto;width:clamp(280px,38vw,380px);margin:0;padding:1.6rem 1.4rem;text-align:center;
+  border:none;border-radius:0;margin-right:1.2rem;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1rem}
+.testi-q{font-family:var(--disp);font-style:italic;font-weight:300;
+  font-size:clamp(.95rem,.92rem + .25vw,1.08rem);line-height:1.55;color:var(--soft);margin:0}
+.testi-name{font-family:var(--sans);font-style:normal;font-size:.85rem;font-weight:500;
+  letter-spacing:.03em;color:var(--espresso)}
+@media(prefers-reduced-motion:reduce){
+  .tests{animation:none;flex-wrap:wrap;width:100%}
+  .tests-wrap::before,.tests-wrap::after{display:none}
+}
+
+/* ---- faq ---- */
+.faq{margin-top:1.7rem;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;gap:1rem;justify-content:space-between;
+  align-items:flex-start;padding:1.15rem 0;font-family:var(--disp);font-weight:300;
+  font-size:clamp(1.12rem,1.05rem + .4vw,1.3rem);line-height:1.32;color:var(--espresso)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.faq .qn{font-family:var(--sans);font-size:.8rem;letter-spacing:.04em;color:var(--gold);
+  padding-top:.4rem;flex:0 0 auto}
+.faq .qt{flex:1 1 auto}
+.faq .ic{flex:0 0 auto;width:14px;height:14px;margin-top:.42rem;position:relative;color:var(--gold)}
+.faq .ic::before,.faq .ic::after{content:"";position:absolute;background:currentColor;transition:transform .3s}
+.faq .ic::before{top:6.5px;left:0;width:14px;height:1px}
+.faq .ic::after{left:6.5px;top:0;height:14px;width:1px}
+.faq details[open] .ic::after{transform:scaleY(0)}
+.faq .a{overflow:hidden}
+.faq .a-in{padding:0 0 1.3rem;color:var(--ink);font-size:1.01rem;max-width:44em}
+.faq .a-in p{margin-bottom:.6rem}
+@media(min-width:760px){.faq .a-in{padding-left:2.4rem}}
+
+/* ---- salon / map ---- */
+.map-frame{width:100%;aspect-ratio:4/3;border:1px solid var(--line);background:var(--oat)}
+@media(min-width:900px){.map-frame{aspect-ratio:16/10}}
+
+/* ---- dock ---- */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:70;
+  padding:.55rem var(--pad) calc(.55rem + env(safe-area-inset-bottom));
+  background:rgba(244,239,228,.95);backdrop-filter:blur(12px);border-top:none;
+  transform:translateY(115%);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.dock.on{transform:none}
+.dock .btn{width:100%}
+@media(min-width:720px){.dock{display:none}}
+
+/* ---- footer ---- */
+.foot{background:#5C4A3A;color:rgba(240,232,218,.8);text-align:center}
+.foot img{width:min(210px,54%);margin:0 auto;border-radius:10px}
+.foot .tag{font-family:var(--disp);font-style:italic;font-size:1.15rem;color:#EADFCB;margin-top:1.1rem}
+.foot .nm{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-top:.6rem}
+
+/* ---- reveal ---- */
+.rv{opacity:0;transform:translateY(12px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+.brush-ul{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8c30-6 60 2 90-2s60-4 90 0 60 4 90-1 25-3 26-2' fill='none' stroke='%238B6F45' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:repeat-x;background-position:0 100%;background-size:100% .35em;
+  padding-bottom:.2em}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="wrap head-in">
+    <a class="brand" href="#top"><b>Alina Cotta</b><span>Beauty Lounge</span></a>
+    <nav class="nav" aria-label="Navigare pagină">
+      <a href="#consultatie">Consultația</a>
+      <a href="#proces">Cum lucrăm</a>
+      <a href="#rezultate">Rezultate</a>
+      <a href="#servicii">Servicii</a>
+      <a href="#intrebari">Întrebări</a>
+    </nav>
+    <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener"><span class="full">Programează o consultație</span><span class="short">Programează</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1 — PROMISIUNEA PRINCIPALĂ -->
+<section class="hero" id="promisiune">
+  <div class="wrap hero-g">
+    <div>
+      <h1>Părul tău merită <em style="font-style:normal;color:var(--gold)">mai mult</em> decât o culoare frumoasă.</h1>
+      <p class="lead">La Alina Cotta Beauty Lounge, îmbinăm frumusețea cu grija pentru sănătatea părului tău, prin colorare organică fără amoniac și servicii personalizate, pentru un rezultat care te reprezintă și de care să te bucuri pe termen lung.</p>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <p class="hero-sig"><span></span>Peste 15 ani de experiență în hairstyling</p>
+    </div>
+    <figure class="hero-fig">
+      <img src="https://alinacotta.ro/wp-content/uploads/2026/11/hero-alina-full-scaled.jpg" width="768" height="1203" alt="Alina Cotta, fondatoare și hairstylist, în salonul ei din București, alături de produsele NATULIQUE" fetchpriority="high" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<!-- 2 — CIFRE ȘI CREDIBILITATE -->
+<section class="strip" aria-label="Repere">
+  <div class="ticker">
+    <div class="tick-set"><span class="tick-i"><b>15 ani</b><i>experiență</i></span><span class="tick-i"><b>Fără amoniac</b><i>colorare organică</i></span><span class="tick-i"><b>Fără miros</b><i>chimic înțepător</i></span><span class="tick-i"><b>1 la 1</b><i>atenție dedicată</i></span></div>
+    <div class="tick-set" aria-hidden="true"><span class="tick-i"><b>15 ani</b><i>experiență</i></span><span class="tick-i"><b>Fără amoniac</b><i>colorare organică</i></span><span class="tick-i"><b>Fără miros</b><i>chimic înțepător</i></span><span class="tick-i"><b>1 la 1</b><i>atenție dedicată</i></span></div>
+  </div>
+</section>
+<!-- 3 — CONSULTAȚIA INIȚIALĂ -->
+<section class="sec has-motif" id="consultatie">
+  <svg class="motif motif-r" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M100 8c22 34 22 68 0 102-22-34-22-68 0-102z"/><path d="M100 110v82"/><path d="M100 132c-16-18-38-24-58-18 6 20 26 32 46 28"/><path d="M100 162c16-18 38-24 58-18-6 20-26 32-46 28"/><circle cx="100" cy="58" r="13"/></svg>
+  <div class="wrap split split-5-7 flip rv">
+    <figure class="fig r-45">
+      <img src="https://alinacotta.ro/wp-content/uploads/2026/11/alina-consultatie-1.jpg" width="720" height="960" alt="Consultație în salon — analizăm părul clientei și alegem nuanța din paleta NATULIQUE" loading="lazy" decoding="async">
+    </figure>
+    <div>
+      <h2>Frumusețea începe cu tine</h2>
+      <p class="lead" style="margin-top:1rem">Înainte de orice transformare, vrem să te cunoaștem.</p>
+      <div class="copy" style="margin-top:.9rem">
+        <p>În cadrul consultației inițiale gratuite, analizăm nevoile părului tău, discutăm despre culoarea și tunsoarea care ți se potrivesc și construim împreună o soluție adaptată stilului tău de viață.</p>
+      </div>
+      <p class="quote" style="margin-top:1.5rem;border-left:2px solid var(--gold-lt);padding-left:1.3rem;font-family:var(--disp);font-size:clamp(1.12rem,1.04rem + .65vw,1.48rem);font-weight:500;font-style:normal;letter-spacing:.04em">Scopul nostru este să pleci nu doar cu un look frumos, ci cu <span class="brush-ul">unul în care te regăsești.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 — CUM LUCRĂM -->
+<section class="sec bg-shell" id="proces">
+  <div class="wrap">
+    <div class="rv" style="max-width:40rem">
+      <h2>Drumul către transformarea ta</h2>
+    </div>
+    <ol class="road rv">
+      <li><span class="n">01</span><div class="road-t"><h3 style="font-weight:500">Programezi consultația gratuită.</h3><p>Alegem împreună un moment în care să discutăm despre schimbarea pe care ți-o dorești.</p></div></li>
+      <li><span class="n">02</span><div class="road-t"><h3 style="font-weight:500">Îți cunoaștem părul și dorințele.</h3><p>Evaluăm starea actuală a părului, istoricul colorărilor și rezultatul pe care vrei să îl obții.</p></div></li>
+      <li><span class="n">03</span><div class="road-t"><h3 style="font-weight:500">Construim planul personalizat.</h3><p>Alegem tehnica, nuanța, etapele transformării și stabilim transparent bugetul.</p></div></li>
+      <li><span class="n">04</span><div class="road-t"><h3 style="font-weight:500">Dăm viață transformării tale.</h3><p>Realizăm serviciul ales, cu atenție la aspectul și nevoile părului, și îți recomandăm cum să îți menții rezultatul.</p></div></li>
+    </ol>
+    <div class="cta rv">
+      <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5 — REZULTATE REALE -->
+<section class="sec bg-dbrown" id="rezultate">
+  <div class="wrap">
+    <div class="rv" style="max-width:44rem">
+      <h2>Rezultate care vorbesc de la sine</h2>
+      <div class="copy" style="margin-top:1rem">
+        <p>Fiecare femeie vine în salon cu o poveste diferită a părului ei. Unele își doresc să acopere firele albe, altele visează la o nuanță nouă sau vor să redea părului un aspect luminos și îngrijit.</p>
+        <p>Descoperă transformările realizate la Alina Cotta Beauty Lounge și imaginează-ți ce am putea obține împreună pentru părul tău.</p>
+      </div>
+    </div>
+
+    <div class="ba-grid rv" id="baGrid"></div>
+
+
+    <div class="cta cta-center rv">
+      <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- 6 — DE CE COLORAREA ORGANICĂ -->
+<section class="sec has-motif" id="organic">
+  <svg class="motif motif-l" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M100 8c22 34 22 68 0 102-22-34-22-68 0-102z"/><path d="M100 110v82"/><path d="M100 132c-16-18-38-24-58-18 6 20 26 32 46 28"/><path d="M100 162c16-18 38-24 58-18-6 20-26 32-46 28"/><circle cx="100" cy="58" r="13"/></svg>
+  <div class="wrap split split-5-7 rv" style="align-items:center">
+    <figure class="fig vid" style="margin:0">
+      <div class="vid-box">
+        <video autoplay loop muted playsinline preload="metadata">
+          <source src="https://alinacotta.ro/wp-content/uploads/2026/11/salon-loop-opt.mp4" type="video/mp4">
+        </video>
+      </div>
+      <figcaption>NATULIQUE · certified organic</figcaption>
+    </figure>
+
+    <div>
+      <h2 style="font-weight:500">De ce să alegi colorarea organică?</h2>
+      <p class="lead" style="margin-top:1rem">Lucrăm cu NATULIQUE, un sistem profesional de colorare permanentă fără amoniac, cu ingrediente de origine naturală și organică certificată.</p>
+
+      <ul class="check-list" style="margin-top:1.6rem">
+        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Acoperă firele albe</b>, cu o culoare uniformă și de durată</span></li>
+        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Aceleași transformări ca la vopseaua clasică</b>, pigmenții se formează în interiorul firului</span></li>
+        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Culoare care rezistă în timp</b>, cu accent pe condiționarea firului de păr</span></li>
+        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Mai blândă cu scalpul</b>, fără mirosul înțepător al amoniacului</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 7 — CE PUTEM FACE PENTRU TINE -->
+<section class="sec bg-shell" id="servicii">
+  <div class="wrap">
+    <div class="rv" style="max-width:40rem">
+      <h2>O nouă abordare a colorării părului tău</h2>
+      <p class="lead" style="margin-top:1rem">Fie că îți dorești să acoperi firele albe, să îți reîmprospătezi nuanța sau să faci o schimbare de look, alegem împreună formula și tehnica potrivite părului tău.</p>
+    </div>
+    <div class="svcs rv">
+      <article>
+        <img src="https://alinacotta.ro/wp-content/uploads/2026/11/colorare-organica-scaled.jpg" width="4284" height="5712" alt="Colorare organică — blond natural, luminos" loading="lazy" decoding="async">
+        <h3>Colorare organică</h3>
+        <p>Colorare permanentă fără amoniac, cu ingrediente de origine naturală și organică certificată.</p>
+      </article>
+      <article>
+        <img src="https://alinacotta.ro/wp-content/uploads/2026/11/balayage-scaled.jpg" width="4284" height="5712" alt="Balayage — blond cald cu tranziție naturală" loading="lazy" decoding="async">
+        <h3>Balayage și nuanțare</h3>
+        <p>Reflexii luminoase, profunzime și nuanțe care îți pun în valoare frumusețea naturală.</p>
+      </article>
+      <article>
+        <img src="https://alinacotta.ro/wp-content/uploads/2026/11/schimbare-nuanta-scaled.jpg" width="3840" height="5120" alt="Schimbare de nuanță — roșu intens și profund" loading="lazy" decoding="async">
+        <h3>Schimbări de nuanță</h3>
+        <p>Îți explicăm de la început ce este posibil și în câte etape ajungem la culoarea dorită.</p>
+      </article>
+      <article>
+        <img src="https://alinacotta.ro/wp-content/uploads/2026/11/acoperire-fire-albe-scaled.jpg" width="3210" height="5100" alt="Acoperirea firelor albe — bronde luminos" loading="lazy" decoding="async">
+        <h3>Acoperirea firelor albe</h3>
+        <p>Culoare uniformă și de durată, cu o tehnică aleasă în funcție de starea părului tău.</p>
+      </article>
+    </div>
+    <div class="cta cta-center rv">
+      <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Solicită o consultație personalizată<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- 8 — TESTIMONIALE -->
+<section class="sec" id="testimoniale">
+  <div class="wrap">
+    <div class="rv" style="max-width:40rem">
+      <h2>Experiențele clientelor la Alina Cotta Beauty Lounge</h2>
+    </div>
+    <div class="tests-wrap rv">
+      <div class="tests">
+        <blockquote class="testi"><p class="testi-q">"Am avut o experiență minunată la Alina, atât omul Alina cât și locul emanând multă căldură și stare de bine. Iar de rezultat sunt extrem de încântată."</p><cite class="testi-name">Roxana Liliana Cârjan</cite></blockquote>
+        <blockquote class="testi"><p class="testi-q">"Un hairstylist extraordinar! Se vede pasiunea, atenția și experiența în fiecare tunsoare și vopsit. Am fost foarte mulțumită de rezultat, iar părul arată exact cum mi-am dorit."</p><cite class="testi-name">Dana Trăistaru</cite></blockquote>
+        <blockquote class="testi"><p class="testi-q">"Am avut parte de o experiență absolut minunată! Totul a fost la superlativ: profesionalism, atenție la detalii, atmosferă plăcută și multă grijă față de client. Rezultatul a fost peste așteptări!"</p><cite class="testi-name">Emilia Guțu</cite></blockquote>
+        <blockquote class="testi"><p class="testi-q">"Sunt mulți ani de când vin la Alina Beauty și de când folosesc vopseaua de păr organică. Părul meu arată excelent și cred că asta spune tot. Am făcut multe schimbări și cu toate astea părul meu arată perfect."</p><cite class="testi-name">Andreea Ene</cite></blockquote>
+        <blockquote class="testi"><p class="testi-q">"Alina este genul de stilist pe care, odată ce l-ai găsit, nu mai vrei să-l schimbi. Vin la ea de șapte ani și de fiecare dată reușește să mă surprindă plăcut. Apreciez foarte mult că folosește vopsea organică Natulique."</p><cite class="testi-name">Raluca Trandafir</cite></blockquote>
+        <blockquote class="testi"><p class="testi-q">"Merg la acest salon de peste 10 ani, iar Alina este cea care are grijă de părul meu de fiecare dată. Am ales colorarea cu vopseaua organică Natulique, iar rezultatul este mereu exact așa cum îmi doresc."</p><cite class="testi-name">Luminița Pleșoianu</cite></blockquote>
+        <blockquote class="testi"><p class="testi-q">"Un loc unde m-am simțit bine atât eu cât și părul meu. După șase ani în care am folosit henna, am descoperit vopseaua organică Natulique care pot spune că este minunată."</p><cite class="testi-name">Carmen Ciocan</cite></blockquote>
+        <!-- duplicate for seamless loop -->
+        <blockquote class="testi" aria-hidden="true"><p class="testi-q">"Am avut o experiență minunată la Alina, atât omul Alina cât și locul emanând multă căldură și stare de bine. Iar de rezultat sunt extrem de încântată."</p><cite class="testi-name">Roxana Liliana Cârjan</cite></blockquote>
+        <blockquote class="testi" aria-hidden="true"><p class="testi-q">"Un hairstylist extraordinar! Se vede pasiunea, atenția și experiența în fiecare tunsoare și vopsit. Am fost foarte mulțumită de rezultat, iar părul arată exact cum mi-am dorit."</p><cite class="testi-name">Dana Trăistaru</cite></blockquote>
+        <blockquote class="testi" aria-hidden="true"><p class="testi-q">"Am avut parte de o experiență absolut minunată! Totul a fost la superlativ: profesionalism, atenție la detalii, atmosferă plăcută și multă grijă față de client. Rezultatul a fost peste așteptări!"</p><cite class="testi-name">Emilia Guțu</cite></blockquote>
+        <blockquote class="testi" aria-hidden="true"><p class="testi-q">"Sunt mulți ani de când vin la Alina Beauty și de când folosesc vopseaua de păr organică. Părul meu arată excelent și cred că asta spune tot. Am făcut multe schimbări și cu toate astea părul meu arată perfect."</p><cite class="testi-name">Andreea Ene</cite></blockquote>
+        <blockquote class="testi" aria-hidden="true"><p class="testi-q">"Alina este genul de stilist pe care, odată ce l-ai găsit, nu mai vrei să-l schimbi. Vin la ea de șapte ani și de fiecare dată reușește să mă surprindă plăcut. Apreciez foarte mult că folosește vopsea organică Natulique."</p><cite class="testi-name">Raluca Trandafir</cite></blockquote>
+        <blockquote class="testi" aria-hidden="true"><p class="testi-q">"Merg la acest salon de peste 10 ani, iar Alina este cea care are grijă de părul meu de fiecare dată. Am ales colorarea cu vopseaua organică Natulique, iar rezultatul este mereu exact așa cum îmi doresc."</p><cite class="testi-name">Luminița Pleșoianu</cite></blockquote>
+        <blockquote class="testi" aria-hidden="true"><p class="testi-q">"Un loc unde m-am simțit bine atât eu cât și părul meu. După șase ani în care am folosit henna, am descoperit vopseaua organică Natulique care pot spune că este minunată."</p><cite class="testi-name">Carmen Ciocan</cite></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 — ÎNTREBĂRI FRECVENTE -->
+<section class="sec bg-shell" id="intrebari">
+  <div class="wrap">
+    <div class="rv" style="max-width:40rem">
+      <h2>Ce ne întreabă clientele cel mai des</h2>
+    </div>
+    <div class="faq rv" style="max-width:52rem">
+      <details>
+        <summary><span class="qn">01</span><span class="qt">Vopseaua organică acoperă firele albe?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Da. NATULIQUE este un sistem de colorare permanentă, conceput inclusiv pentru acoperirea firelor albe.</p>
+          <p>Nuanța și gradul de acoperire depind de proporția firelor albe, de structura părului și de formula aleasă. În cadrul consultației stabilim ce rezultat putem obține.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">02</span><span class="qt">Pot obține o schimbare majoră de culoare?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Analizez mai întâi culoarea actuală, istoricul colorărilor și starea părului, pentru a alege formula potrivită.</p>
+          <p>Dacă îți dorești o schimbare majoră de nuanță, este posibil să fie necesare mai multe etape pentru a ajunge la rezultatul dorit.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">03</span><span class="qt">Cât durează consultația?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Durata consultației trebuie confirmată cu Alina. Nu este specificată în document.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">04</span><span class="qt">Cât costă serviciile?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>La Alina Cotta Beauty Lounge, colorarea NATULIQUE pornește de la 500 lei.</p>
+          <p>Prețul final depinde de lungimea și densitatea părului, cantitatea de produs necesară și serviciile efectuate. Îți explic costurile înainte de colorare.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">05</span><span class="qt">Dacă vopseaua este organică, înseamnă că este 100% naturală?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Nu. NATULIQUE conține ingrediente de origine naturală și ingrediente certificate organic, dar nu este o vopsea alcătuită exclusiv din plante.</p>
+          <p>Pentru a obține o culoare permanentă, sunt necesare și ingrediente care participă la reacția chimică de colorare. Diferența este că NATULIQUE folosește formule fără amoniac, care includ și ingrediente cu rol de condiționare a părului.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">06</span><span class="qt">Dacă vopseaua clasică îmi provoacă usturime sau iritații, cu NATULIQUE voi scăpa de aceste probleme?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Nu neapărat. Unele persoane pot avea o experiență mai confortabilă cu formule fără amoniac, însă un scalp sensibil poate reacționa și la alte ingrediente, inclusiv la unele de origine naturală.</p>
+          <p>Dacă ai avut usturimi, descuamare sau iritații după colorări anterioare, este important să stabilim mai întâi cauza, cu ajutorul unui dermatolog. Înainte de o nouă colorare, discutăm despre istoricul tău și verificăm dacă procedura poate fi realizată în condiții adecvate de siguranță.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">07</span><span class="qt">Cât timp rezistă culoarea NATULIQUE?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>NATULIQUE oferă colorare permanentă, concepută pentru rezultate de durată. Totuși, modul în care se păstrează nuanța depinde de porozitatea firului, frecvența spălărilor, produsele de îngrijire și istoricul părului.</p>
+          <p>Aleg formula și tehnica potrivite pentru a obține o culoare care se menține frumoasă și îți recomand cum să o îngrijești între programări.</p>
+        </div></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 10 — TE AȘTEPTĂM ÎN SALON -->
+<section class="sec bg-dbrown" id="salon">
+  <div class="wrap split split-5-7 rv" style="align-items:center">
+    <div class="fig">
+      <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.5!2d26.0833!3d44.4567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU3RyLiBNxINyxINyZXN0aSAzNSwgYXAuIDIsIEJ1Y2hhcmVzdA!5e0!3m2!1sro!2sro!4v1700000000000" style="border:0;border-radius:10px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div>
+      <h2>Te așteptăm în salon</h2>
+      <p class="lead" style="margin-top:1rem">Hai să descoperim împreună ce i se potrivește părului tău.</p>
+      <div class="copy" style="margin-top:.9rem">
+        <p>Te așteptăm la Alina Cotta Beauty Lounge, într-un spațiu intim, în care fiecare clientă beneficiază de atenție deplină și de timp dedicat.</p>
+      </div>
+      <div style="margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid rgba(240,232,218,.18)">
+        <p class="addr-l">Adresă</p>
+        <p style="margin:0;color:rgba(240,232,218,.93)">Str. Mărăști 35, ap. 2, București, România 011463</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" id="navBtn" href="https://www.google.com/maps/search/?api=1&amp;query=Str.+Marasti+35+ap.+2+Bucharest+Romania+011463" target="_blank" rel="noopener">Vezi cum ajungi la noi</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot sec-sm">
+  <div class="wrap">
+    <img src="https://alinacotta.ro/wp-content/uploads/2026/11/logo-salon.jpg" width="1024" height="683" alt="Logo Alina Cotta Beauty Lounge, aplicat pe vitrina salonului" loading="lazy" decoding="async">
+    <p class="tag">A sanctuary for conscious beauty</p>
+    <p class="nm">Alina Cotta Beauty Lounge</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta</a>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  /* ★ WORDPRESS: change this ONE path to your uploads folder ★ */
+  var IMG = 'https://alinacotta.ro/wp-content/uploads/2026/11/';
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- before/after pairs: built from one source of truth ---- */
+  var PAIRS = [
+    { // real client pair — the three context lines still need the salon's own wording
+      before:IMG+'ba1-before-1.jpg', after:IMG+'ba1-after-1.jpg',
+      alt:'Aceeași clientă înainte și după: de la nuanțe calde, neuniforme, la un blond rece și uniform',
+      tema:null, tehnica:null, rezultat:null },
+    { // real client pair — context lines still need the salon's own wording
+      before:IMG+'ba2-before-1.jpg', after:IMG+'ba2-after-1.jpg',
+      alt:'Aceeași clientă înainte și după: de la rădăcini crescute cu fire albe, la o culoare aramie uniformă',
+      tema:null, tehnica:null, rezultat:null },
+    { // real client pair — context lines still need the salon's own wording
+      before:IMG+'ba3-before.jpg', after:IMG+'ba3-after.jpg',
+      alt:'Aceeași clientă înainte și după: de la rădăcini crescute și lungimi uscate, la un blond rece, luminos și bine definit',
+      tema:null, tehnica:null, rezultat:null },
+    { // real client pair — context lines still need the salon's own wording
+      before:IMG+'ba4-before.jpg', after:IMG+'ba4-after.jpg',
+      alt:'Aceeași clientă înainte și după: de la rădăcini crescute și lungimi aramii, uscate, la un balayage cald, luminos, cu valuri definite',
+      tema:null, tehnica:null, rezultat:null }
+  ];
+  var PH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M3 5h18v14H3z"/><circle cx="8.5" cy="10" r="1.5"/><path d="m3 17 5-4.5 4 3.5 3.5-3L21 18"/></svg>';
+  function pane(p, side){
+    var src = side === 'b' ? p.before : p.after;
+    var tag = side === 'b' ? 'Înainte' : 'După';
+    if (src) {
+      return '<img src="' + src + '" width="1000" height="1250" alt="' +
+             (side === 'b' ? (p.alt || '') : '') + '" loading="lazy" decoding="async">';
+    }
+    return '<div class="ba-slot sl-' + side + '">' + PH +
+           '<b>Slot „' + tag.toLowerCase() + '”</b><span>Fotografie de adăugat</span></div>';
+  }
+  function meta(label, value){
+    return '<dt>' + label + '</dt><dd>' +
+      (value ? value : '<em class="pend">de completat</em>') + '</dd>';
+  }
+  var grid = document.getElementById('baGrid');
+  if (grid) {
+    grid.innerHTML = PAIRS.map(function(p, i){
+      var has = !!(p.before && p.after);
+      return '<figure style="margin:0">' +
+        '<div class="ba' + (has ? ' ba-real' : '') + '" tabindex="0" role="slider"' +
+        ' aria-label="Comparație înainte și după, transformarea ' + (i + 1) + '"' +
+        ' aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">' +
+          '<div class="ba-pane ba-bottom">' + pane(p, 'b') + '<span class="ba-tag l">Înainte</span></div>' +
+          '<div class="ba-pane ba-top">' + pane(p, 'a') + '<span class="ba-tag r">După</span></div>' +
+          '<div class="ba-handle"><span class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M9 7 4 12l5 5M15 7l5 5-5 5"/></svg></span></div>' +
+        '</div>' +
+        '</figure>';
+    }).join('');
+  }
+  /* ---- comparator drag ---- */
+  document.querySelectorAll('.ba').forEach(function(ba){
+    var top = ba.querySelector('.ba-top'), handle = ba.querySelector('.ba-handle');
+    var val = 50, dragging = false;
+    function set(v){
+      val = Math.max(0, Math.min(100, v));
+      top.style.clipPath = 'inset(0 0 0 ' + val + '%)';
+      handle.style.left = val + '%';
+      ba.setAttribute('aria-valuenow', Math.round(val));
+    }
+    function fromX(x){ var r = ba.getBoundingClientRect(); set(((x - r.left) / r.width) * 100); }
+    ba.addEventListener('pointerdown', function(e){ dragging = true; ba.setPointerCapture(e.pointerId); fromX(e.clientX); });
+    ba.addEventListener('pointermove', function(e){ if (dragging) fromX(e.clientX); });
+    ba.addEventListener('pointerup', function(){ dragging = false; });
+    ba.addEventListener('pointercancel', function(){ dragging = false; });
+    ba.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowLeft'){ set(val - 4); e.preventDefault(); }
+      if (e.key === 'ArrowRight'){ set(val + 4); e.preventDefault(); }
+    });
+    set(50);
+  });
+
+  /* ---- roadmap: staggered arrival ---- */
+  var steps = [].slice.call(document.querySelectorAll('.road > li'));
+  if (steps.length) {
+    if (reduce || !('IntersectionObserver' in window)) {
+      steps.forEach(function(li){ li.classList.add('in'); });
+    } else {
+      // rows always arrive one after another, however they enter the viewport
+      var queued = 0, lastArrival = 0;
+      var sio = new IntersectionObserver(function(es){
+        es.filter(function(e){ return e.isIntersecting; })
+          .sort(function(a, b){ return steps.indexOf(a.target) - steps.indexOf(b.target); })
+          .forEach(function(e){
+            var now = Date.now();
+            // if nothing arrived recently, start immediately; otherwise fall in behind
+            if (now - lastArrival > 700) queued = 0;
+            var delay = queued * 175;
+            queued++;
+            lastArrival = now + delay;
+            setTimeout(function(){ e.target.classList.add('in'); }, delay);
+            sio.unobserve(e.target);
+          });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: .2 });
+      steps.forEach(function(li){ sio.observe(li); });
+    }
+  }
+
+  /* ---- reveal ---- */
+  var rvs = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) {
+    rvs.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -7% 0px', threshold: .05 });
+    rvs.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---- anchor nav, header-aware ---- */
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href');
+    if (id.length < 2) return;
+    var t = document.querySelector(id);
+    if (!t) return;
+    ev.preventDefault();
+    var head = document.querySelector('.head');
+    var off = head ? head.getBoundingClientRect().height : 0;
+    window.scrollTo({ top: t.getBoundingClientRect().top + pageYOffset - off - 4,
+                      behavior: reduce ? 'auto' : 'smooth' });
+  });
+
+  /* ---- accordions: animated, one open per group ---- */
+  function wire(sel){
+    var all = [].slice.call(document.querySelectorAll(sel + ' details'));
+    all.forEach(function(d){
+      var panel = d.querySelector('.a, .b-more'), sum = d.querySelector('summary');
+      if (!panel) return;
+      panel.style.height = '0px';
+      function once(el, fn, ms){
+        var done = false;
+        function go(){ if (done) return; done = true; el.removeEventListener('transitionend', go); fn(); }
+        el.addEventListener('transitionend', go);
+        setTimeout(go, ms);               // guard: transitionend can be skipped
+      }
+      function shut(el){
+        var p = el.querySelector('.a, .b-more');
+        if (reduce){ el.open = false; p.style.height = '0px'; return; }
+        p.style.transition = 'none';
+        p.style.height = p.scrollHeight + 'px';
+        void p.offsetHeight;              // force reflow so the next value animates
+        p.style.transition = 'height .26s cubic-bezier(.3,.7,.3,1)';
+        p.style.height = '0px';
+        once(p, function(){ el.open = false; }, 320);
+      }
+      sum.addEventListener('click', function(ev){
+        ev.preventDefault();
+        if (d.open){ shut(d); return; }
+        all.forEach(function(o){ if (o !== d && o.open) shut(o); });
+        d.open = true;
+        if (reduce){ panel.style.height = 'auto'; return; }
+        panel.style.transition = 'none';
+        panel.style.height = '0px';
+        void panel.offsetHeight;
+        panel.style.transition = 'height .32s cubic-bezier(.3,.7,.3,1)';
+        panel.style.height = panel.scrollHeight + 'px';
+        once(panel, function(){ if (d.open) panel.style.height = 'auto'; }, 380);
+      });
+    });
+  }
+  wire('.faq'); wire('.bens');
+
+  /* ---- mobile dock: hides whenever a real CTA is on screen ---- */
+  var dock = document.getElementById('dock');
+  var ctas = [].slice.call(document.querySelectorAll('.cta .btn'));
+  function tick(){
+    if (!dock) return;
+    var vh = innerHeight;
+    var visible = ctas.some(function(b){ var r = b.getBoundingClientRect(); return r.bottom > 54 && r.top < vh - 54; });
+    dock.classList.toggle('on', pageYOffset > vh * .7 && !visible);
+  }
+  addEventListener('scroll', tick, { passive: true });
+  addEventListener('resize', tick);
+  tick();
+})();
+</script>
+</body>
+</html>
