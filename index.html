@@ -122,33 +122,24 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 .hero-sig{display:flex;align-items:flex-start;gap:.8rem;margin-top:1.5rem;
   font-size:.875rem;letter-spacing:.02em;color:var(--ink);line-height:1.5}
 .hero-sig span{width:2rem;height:1px;background:var(--gold);flex:0 0 auto;margin-top:.62em}
+.cta-note{font-size:.82rem;color:var(--soft);margin-top:.7rem;line-height:1.5}
 @media(min-width:900px){
   .hero-g{grid-template-columns:7fr 5fr;gap:clamp(2rem,4.5vw,3.6rem);align-items:center}
   .hero-fig img{aspect-ratio:4/5;object-position:50% 25%}
   .hero{padding-bottom:clamp(1.4rem,3vw,2.2rem)}
 }
 
-/* ---- cifre: marquee band ---- */
+/* ---- ticker band ---- */
 .strip{background:#241C14;overflow:hidden;position:relative}
-.strip::before,.strip::after{content:"";position:absolute;top:0;bottom:0;width:4.5rem;z-index:2;pointer-events:none}
-.strip::before{left:0;background:linear-gradient(90deg,#241C14,rgba(36,28,20,0))}
-.strip::after{right:0;background:linear-gradient(270deg,#241C14,rgba(36,28,20,0))}
-.ticker{display:flex;width:max-content;animation:slide 42s linear infinite;will-change:transform}
-.strip:hover .ticker{animation-play-state:paused}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.tick-set{display:flex;flex:0 0 auto}
-.tick-i{display:flex;align-items:baseline;gap:.6rem;padding:1.15rem 0;white-space:nowrap}
-.tick-i b{font-family:var(--disp);font-weight:300;font-size:1.3rem;color:#F0E8DA;letter-spacing:-.015em}
-.tick-i i{font-style:normal;font-size:.9rem;color:rgba(240,232,218,.78)}
-.tick-i::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold-lt);
-  opacity:.8;margin:0 1.9rem;align-self:center;flex:0 0 auto}
-@media(prefers-reduced-motion:reduce){
-  .strip::before,.strip::after{display:none}
-  .ticker{animation:none;width:100%;justify-content:center;flex-wrap:wrap}
-  .tick-set:last-child{display:none}
-  .tick-set{flex-wrap:wrap;justify-content:center}
-  .tick-i{padding:.65rem 0}
-}
+.tick-wrap{display:flex;width:max-content;will-change:transform;
+  animation:ticker 26s linear infinite}
+@keyframes ticker{to{transform:translateX(-50%)}}
+.tick-set{display:flex;align-items:center;gap:0;flex-shrink:0}
+.tick-item{display:flex;align-items:baseline;gap:.5rem;padding:1.05rem 1.6rem;white-space:nowrap}
+.tick-item b{font-family:var(--disp);font-weight:400;font-size:clamp(1.2rem,1rem + .8vw,1.5rem);
+  color:rgba(240,232,218,.92);letter-spacing:.02em}
+.tick-item span{font-size:.82rem;color:rgba(240,232,218,.55);letter-spacing:.03em}
+.tick-dot{color:rgba(240,232,218,.35);font-size:.6rem;padding:0 .2rem}
 
 /* ---- editorial split ---- */
 .split{display:grid;gap:clamp(1.4rem,3.8vw,2.2rem);align-items:center}
@@ -181,9 +172,9 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 .slot-note{font-size:.86rem;line-height:1.6;letter-spacing:.01em;color:var(--soft);margin-top:.7rem}
 
 /* ---- roadmap ---- */
-.road{list-style:none;margin:1.7rem 0 0;padding:0;border-top:1px solid var(--line)}
-.road>li{display:grid;grid-template-columns:3.1rem 1fr;gap:1rem;
-  padding:1.3rem 0;border-bottom:1px solid var(--line);align-items:start;
+.road{list-style:none;margin:1.7rem 0 0;padding:0}
+.road>li{display:grid;grid-template-columns:1fr;gap:0;
+  padding:1.3rem 0;align-items:start;
   opacity:0;transform:translateY(22px);
   transition:opacity .72s cubic-bezier(.22,.7,.3,1),transform .72s cubic-bezier(.22,.7,.3,1)}
 .road>li.in{opacity:1;transform:none}
@@ -198,16 +189,18 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
   .road>li,.road .n,.road-t>*{opacity:1!important;transform:none!important}
 }
 .road-t{min-width:0}
-.road .n{font-family:var(--disp);font-weight:200;font-size:1.75rem;line-height:.9;
-  color:var(--gold);padding-top:.1rem;font-variation-settings:'opsz' 144}
+.road .n{font-family:var(--sans);font-weight:400;font-size:1.1rem;line-height:1.2;
+  color:var(--gold);padding-top:.18rem}
 .road h3{margin-bottom:.42rem}
 .road p{color:var(--ink);font-size:1.03rem;max-width:40em}
 @media(min-width:900px){
-  .road>li{grid-template-columns:4.5rem 1fr;gap:1.8rem}
-  .road-t{display:grid;grid-template-columns:1fr 1.15fr;gap:1.8rem;align-items:start}
-  .road .n{font-size:2.3rem}
+  .road>li{grid-template-columns:1fr;gap:0}
+  .road-t{display:grid;grid-template-columns:1fr 1.4fr;gap:1.8rem;align-items:start}
   .road h3{margin-bottom:0}
 }
+.road-conclusion{margin-top:1.6rem;padding:1.4rem 0 0}
+.road-conclusion h3{margin-bottom:.5rem}
+.road-conclusion p{color:var(--ink);font-size:1.03rem;max-width:40em}
 
 /* ---- before / after ---- */
 .ba-grid{display:grid;gap:clamp(1.3rem,3.4vw,2rem);margin-top:1.8rem}
@@ -269,6 +262,8 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 .check-list .tick{width:20px;height:20px;flex:0 0 auto;color:var(--gold);margin-top:.18rem}
 .check-list span{font-size:1.01rem;line-height:1.52;color:var(--ink)}
 .check-list b{font-weight:500;color:var(--espresso)}
+.disclaimer{margin-top:1.2rem;font-size:.88rem;line-height:1.6;color:var(--soft);
+  padding:1rem 1.2rem;background:rgba(30,23,16,.04);border-radius:8px;border-left:3px solid var(--gold-lt)}
 
 /* ---- benefits: video + ticked rows ---- */
 .vid-box{position:relative;width:100%;aspect-ratio:4/5;border-radius:10px;overflow:hidden;
@@ -355,6 +350,18 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 .map-frame{width:100%;aspect-ratio:4/3;border:1px solid var(--line);background:var(--oat)}
 @media(min-width:900px){.map-frame{aspect-ratio:16/10}}
 
+/* ---- gallery ---- */
+.gallery{display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:1rem;
+  overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  margin-top:1.8rem;margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad);padding-bottom:.3rem}
+.gallery::-webkit-scrollbar{display:none}
+.gallery figure{margin:0;scroll-snap-align:center}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+@media(min-width:760px){
+  .gallery{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;
+    overflow:visible;margin-inline:0;padding-inline:0;gap:1.2rem}
+}
+
 /* ---- dock ---- */
 .dock{position:fixed;left:0;right:0;bottom:0;z-index:70;
   padding:.55rem var(--pad) calc(.55rem + env(safe-area-inset-bottom));
@@ -387,27 +394,28 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
     <a class="brand" href="#top"><b>Alina Cotta</b><span>Beauty Lounge</span></a>
     <nav class="nav" aria-label="Navigare pagină">
       <a href="#consultatie">Consultația</a>
-      <a href="#proces">Cum lucrăm</a>
       <a href="#rezultate">Rezultate</a>
       <a href="#servicii">Servicii</a>
+      <a href="#organic">De ce fără amoniac</a>
       <a href="#intrebari">Întrebări</a>
     </nav>
-    <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener"><span class="full">Programează o consultație</span><span class="short">Programează</span></a>
+    <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener"><span class="full">Solicită consultația gratuită</span><span class="short">Consultație</span></a>
   </div>
 </header>
 
 <main id="top">
 
-<!-- 1 — PROMISIUNEA PRINCIPALĂ -->
+<!-- 1 — HERO -->
 <section class="hero" id="promisiune">
   <div class="wrap hero-g">
     <div>
-      <h1>Părul tău merită <em style="font-style:normal;color:var(--gold)">mai mult</em> decât o culoare frumoasă.</h1>
-      <p class="lead">La Alina Cotta Beauty Lounge, îmbinăm frumusețea cu grija pentru sănătatea părului tău, prin colorare organică fără amoniac și servicii personalizate, pentru un rezultat care te reprezintă și de care să te bucuri pe termen lung.</p>
+      <h1>O culoare care te pune în valoare, cu grijă și blândețe pentru părul și scalpul tău.</h1>
+      <p class="lead">Sunt Alina Cotta, hairstylist cu peste 15 ani de experiență, specializată în colorare profesională fără amoniac. Te ajut să găsești culoarea care ți se potrivește și care îți pune în valoare trăsăturile, folosind produse blânde cu părul și scalpul tău.</p>
       <div class="cta">
-        <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+        <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener">Solicită consultația gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
       </div>
-      <p class="hero-sig"><span></span>Peste 15 ani de experiență în hairstyling</p>
+
+      <p class="hero-sig"><span></span>Tel. programări 0752 244 255</p>
     </div>
     <figure class="hero-fig">
       <img src="img/hero-alina-full.jpg" width="768" height="1203" alt="Alina Cotta, fondatoare și hairstylist, în salonul ei din București, alături de produsele NATULIQUE" fetchpriority="high" decoding="async">
@@ -415,14 +423,25 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
   </div>
 </section>
 
-<!-- 2 — CIFRE ȘI CREDIBILITATE -->
+<!-- 2 — CREDIBILITY BAND (static) -->
 <section class="strip" aria-label="Repere">
-  <div class="ticker">
-    <div class="tick-set"><span class="tick-i"><b>15 ani</b><i>experiență</i></span><span class="tick-i"><b>Fără amoniac</b><i>colorare organică</i></span><span class="tick-i"><b>Fără miros</b><i>chimic înțepător</i></span><span class="tick-i"><b>1 la 1</b><i>atenție dedicată</i></span></div>
-    <div class="tick-set" aria-hidden="true"><span class="tick-i"><b>15 ani</b><i>experiență</i></span><span class="tick-i"><b>Fără amoniac</b><i>colorare organică</i></span><span class="tick-i"><b>Fără miros</b><i>chimic înțepător</i></span><span class="tick-i"><b>1 la 1</b><i>atenție dedicată</i></span></div>
+  <div class="tick-wrap">
+    <div class="tick-set">
+      <span class="tick-dot">•</span><div class="tick-item"><b>15 ani</b><span>experiență</span></div>
+      <span class="tick-dot">•</span><div class="tick-item"><b>Fără amoniac</b><span>colorare organică</span></div>
+      <span class="tick-dot">•</span><div class="tick-item"><b>Fără miros</b><span>chimic înțepător</span></div>
+      <span class="tick-dot">•</span><div class="tick-item"><b>1 la 1</b><span>atenție dedicată</span></div>
+    </div>
+    <div class="tick-set" aria-hidden="true">
+      <span class="tick-dot">•</span><div class="tick-item"><b>15 ani</b><span>experiență</span></div>
+      <span class="tick-dot">•</span><div class="tick-item"><b>Fără amoniac</b><span>colorare organică</span></div>
+      <span class="tick-dot">•</span><div class="tick-item"><b>Fără miros</b><span>chimic înțepător</span></div>
+      <span class="tick-dot">•</span><div class="tick-item"><b>1 la 1</b><span>atenție dedicată</span></div>
+    </div>
   </div>
 </section>
-<!-- 3 — CONSULTAȚIA INIȚIALĂ -->
+
+<!-- 3 — CONSULTAȚIA (merged with roadmap) -->
 <section class="sec has-motif" id="consultatie">
   <svg class="motif motif-r" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M100 8c22 34 22 68 0 102-22-34-22-68 0-102z"/><path d="M100 110v82"/><path d="M100 132c-16-18-38-24-58-18 6 20 26 32 46 28"/><path d="M100 162c16-18 38-24 58-18-6 20-26 32-46 28"/><circle cx="100" cy="58" r="13"/></svg>
   <div class="wrap split split-5-7 flip rv">
@@ -431,56 +450,68 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
     </figure>
     <div>
       <h2>Frumusețea începe cu tine</h2>
-      <p class="lead" style="margin-top:1rem">Înainte de orice transformare, vrem să te cunoaștem.</p>
-      <div class="copy" style="margin-top:.9rem">
-        <p>În cadrul consultației inițiale gratuite, analizăm nevoile părului tău, discutăm despre culoarea și tunsoarea care ți se potrivesc și construim împreună o soluție adaptată stilului tău de viață.</p>
+      <p class="lead" style="margin-top:1rem">Înainte de orice transformare, îmi doresc să te cunosc. Vorbim despre culoarea dorită, istoricul părului tău și stilul tău de viață.</p>
+
+      <ol class="road rv">
+        <li><div class="road-t"><h3 style="font-weight:500">Îți cunosc părul și dorințele.</h3><p>Discutăm despre colorările anterioare, ce îți place, ce vrei să schimbi și eventualele sensibilități.</p></div></li>
+        <li><div class="road-t"><h3 style="font-weight:500">Alegem împreună direcția.</h3><p>Observ starea părului și alegem o direcție de culoare potrivită trăsăturilor tale.</p></div></li>
+        <li><div class="road-t"><h3 style="font-weight:500">Construim planul personalizat.</h3><p>Îți explic tehnica recomandată, dacă sunt necesare mai multe ședințe și cum poți îngriji culoarea acasă.</p></div></li>
+      </ol>
+
+      <div class="road-conclusion rv">
+        <h3 style="font-weight:500">La final, ai mai multă claritate.</h3>
+        <p>Știi ce opțiuni ai și ce implică fiecare. Serviciul de colorare se programează separat, după ce stabilim împreună pașii.</p>
       </div>
-      <p class="quote" style="margin-top:1.5rem;border-left:2px solid var(--gold-lt);padding-left:1.3rem;font-family:var(--disp);font-size:clamp(1.12rem,1.04rem + .65vw,1.48rem);font-weight:500;font-style:normal;letter-spacing:.04em">Scopul nostru este să pleci nu doar cu un look frumos, ci cu <span class="brush-ul">unul în care te regăsești.</span></p>
+
+      <div class="cta">
+        <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener">Solicită consultația gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 4 — CUM LUCRĂM -->
-<section class="sec bg-shell" id="proces">
-  <div class="wrap">
-    <div class="rv" style="max-width:40rem">
-      <h2>Drumul către transformarea ta</h2>
-    </div>
-    <ol class="road rv">
-      <li><span class="n">01</span><div class="road-t"><h3 style="font-weight:500">Programezi consultația gratuită.</h3><p>Alegem împreună un moment în care să discutăm despre schimbarea pe care ți-o dorești.</p></div></li>
-      <li><span class="n">02</span><div class="road-t"><h3 style="font-weight:500">Îți cunoaștem părul și dorințele.</h3><p>Evaluăm starea actuală a părului, istoricul colorărilor și rezultatul pe care vrei să îl obții.</p></div></li>
-      <li><span class="n">03</span><div class="road-t"><h3 style="font-weight:500">Construim planul personalizat.</h3><p>Alegem tehnica, nuanța, etapele transformării și stabilim transparent bugetul.</p></div></li>
-      <li><span class="n">04</span><div class="road-t"><h3 style="font-weight:500">Dăm viață transformării tale.</h3><p>Realizăm serviciul ales, cu atenție la aspectul și nevoile părului, și îți recomandăm cum să îți menții rezultatul.</p></div></li>
-    </ol>
-    <div class="cta rv">
-      <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- 5 — REZULTATE REALE -->
+<!-- 4 — REZULTATE -->
 <section class="sec bg-dbrown" id="rezultate">
   <div class="wrap">
     <div class="rv" style="max-width:44rem">
-      <h2>Rezultate care vorbesc de la sine</h2>
+      <h2>Fiecare rezultat este unic. La fel cum ești și tu.</h2>
       <div class="copy" style="margin-top:1rem">
-        <p>Fiecare femeie vine în salon cu o poveste diferită a părului ei. Unele își doresc să acopere firele albe, altele visează la o nuanță nouă sau vor să redea părului un aspect luminos și îngrijit.</p>
-        <p>Descoperă transformările realizate la Alina Cotta Beauty Lounge și imaginează-ți ce am putea obține împreună pentru părul tău.</p>
+        <p>O culoare frumoasă trebuie să se potrivească femeii care o poartă: trăsăturilor ei, personalității și felului în care își aranjează părul în fiecare zi.</p>
       </div>
     </div>
 
     <div class="ba-grid rv" id="baGrid"></div>
 
-
     <div class="cta cta-center rv">
-      <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener">Solicită consultația gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- 6 — DE CE COLORAREA ORGANICĂ -->
-<section class="sec has-motif" id="organic">
+<!-- 5 — POVESTEA ALINEI -->
+<section class="sec has-motif" id="poveste">
   <svg class="motif motif-l" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M100 8c22 34 22 68 0 102-22-34-22-68 0-102z"/><path d="M100 110v82"/><path d="M100 132c-16-18-38-24-58-18 6 20 26 32 46 28"/><path d="M100 162c16-18 38-24 58-18-6 20-26 32-46 28"/><circle cx="100" cy="58" r="13"/></svg>
+  <div class="wrap split split-5-7 rv" style="align-items:center">
+    <figure class="fig r-45">
+      <img src="img/alina-portret.jpg" width="800" height="1200" alt="Alina Cotta — hairstylist specializată în colorare organică" loading="lazy" decoding="async">
+    </figure>
+    <div>
+      <h2>Sunt Alina. Grija pentru păr are și o poveste personală.</h2>
+      <div class="copy" style="margin-top:1rem">
+        <p>Am ales acest drum pentru că am trăit pe propria piele ce înseamnă un scalp sensibil. Am avut dermatită seboreică ani de zile, iar multe dintre produsele convenționale nu făceau decât să agraveze situația.</p>
+        <p>De aceea am început să caut soluții mai blânde. Am descoperit NATULIQUE, un sistem profesional de colorare permanentă fără amoniac, cu ingrediente de origine naturală și ingrediente certificate organic. L-am testat, l-am studiat și am ales să lucrez exclusiv cu el.</p>
+        <p>Astăzi, după peste 15 ani în hairstyling, îmi doresc ca fiecare femeie care vine la mine să plece nu doar cu un rezultat frumos, ci și cu încredere.</p>
+        <p>Încredere că alegem împreună ce i se potrivește. Că ținem cont de starea reală a părului și a scalpului. Și că nu facem compromisuri de dragul unui efect rapid.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener">Solicită consultația gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 — DE CE COLORAREA FĂRĂ AMONIAC -->
+<section class="sec bg-shell" id="organic">
   <div class="wrap split split-5-7 rv" style="align-items:center">
     <figure class="fig vid" style="margin:0">
       <div class="vid-box">
@@ -492,55 +523,139 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
     </figure>
 
     <div>
-      <h2 style="font-weight:500">De ce să alegi colorarea organică?</h2>
-      <p class="lead" style="margin-top:1rem">Lucrăm cu NATULIQUE, un sistem profesional de colorare permanentă fără amoniac, cu ingrediente de origine naturală și organică certificată.</p>
+      <h2 style="font-weight:500">De ce am ales colorarea fără amoniac?</h2>
+      <p class="lead" style="margin-top:1rem">Folosesc NATULIQUE, un sistem profesional de colorare permanentă fără amoniac, cu ingrediente de origine naturală și ingrediente certificate organic.</p>
 
       <ul class="check-list" style="margin-top:1.6rem">
-        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Acoperă firele albe</b>, cu o culoare uniformă și de durată</span></li>
-        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Aceleași transformări ca la vopseaua clasică</b>, pigmenții se formează în interiorul firului</span></li>
-        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Culoare care rezistă în timp</b>, cu accent pe condiționarea firului de păr</span></li>
-        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Mai blândă cu scalpul</b>, fără mirosul înțepător al amoniacului</span></li>
+        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Acoperire completă a firelor albe</b>, cu rezultate de durată și culoare uniformă.</span></li>
+        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Formulă fără amoniac</b>, dar cu aceleași performanțe ca vopseaua clasică.</span></li>
+        <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg><span><b>Ingrediente cu rol de condiționare</b>, care ajută la păstrarea sănătății firului de păr.</span></li>
       </ul>
+
+      <div class="disclaimer">
+        <p>Fără amoniac nu înseamnă fără alergeni. Orice vopsea permanentă, inclusiv cea fără amoniac, poate provoca reacții la persoanele sensibile. Dacă ai avut iritații sau alergii la colorări anterioare, discută cu un dermatolog înainte de o nouă aplicare.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 7 — CE PUTEM FACE PENTRU TINE -->
-<section class="sec bg-shell" id="servicii">
+<!-- 7 — SERVICII -->
+<section class="sec" id="servicii">
   <div class="wrap">
     <div class="rv" style="max-width:40rem">
-      <h2>O nouă abordare a colorării părului tău</h2>
-      <p class="lead" style="margin-top:1rem">Fie că îți dorești să acoperi firele albe, să îți reîmprospătezi nuanța sau să faci o schimbare de look, alegem împreună formula și tehnica potrivite părului tău.</p>
+      <h2>Ce putem alege pentru părul tău?</h2>
+      <p class="lead" style="margin-top:1rem">Alegem serviciile în funcție de dorințele tale, istoricul colorărilor și starea actuală a părului.</p>
     </div>
     <div class="svcs rv">
       <article>
-        <img src="img/colorare-organica.jpg" width="4284" height="5712" alt="Colorare organică — blond natural, luminos" loading="lazy" decoding="async">
+        <img src="img/colorare-organica.jpg" width="1200" height="900" alt="Colorare organică — fără amoniac" loading="lazy" decoding="async">
         <h3>Colorare organică</h3>
         <p>Colorare permanentă fără amoniac, cu ingrediente de origine naturală și organică certificată.</p>
       </article>
       <article>
-        <img src="img/balayage.jpg" width="4284" height="5712" alt="Balayage — blond cald cu tranziție naturală" loading="lazy" decoding="async">
+        <img src="img/balayage.jpg" width="900" height="1200" alt="Balayage și nuanțare" loading="lazy" decoding="async">
         <h3>Balayage și nuanțare</h3>
         <p>Reflexii luminoase, profunzime și nuanțe care îți pun în valoare frumusețea naturală.</p>
       </article>
       <article>
-        <img src="img/schimbare-nuanta.jpg" width="3840" height="5120" alt="Schimbare de nuanță — roșu intens și profund" loading="lazy" decoding="async">
+        <img src="img/schimbare-nuanta.jpg" width="900" height="1200" alt="Schimbări de nuanță" loading="lazy" decoding="async">
         <h3>Schimbări de nuanță</h3>
         <p>Îți explicăm de la început ce este posibil și în câte etape ajungem la culoarea dorită.</p>
       </article>
       <article>
-        <img src="img/acoperire-fire-albe.jpg" width="3210" height="5100" alt="Acoperirea firelor albe — bronde luminos" loading="lazy" decoding="async">
+        <img src="img/acoperire-fire-albe.jpg" width="755" height="1200" alt="Acoperirea firelor albe — culoare uniformă" loading="lazy" decoding="async">
         <h3>Acoperirea firelor albe</h3>
         <p>Culoare uniformă și de durată, cu o tehnică aleasă în funcție de starea părului tău.</p>
       </article>
     </div>
     <div class="cta cta-center rv">
-      <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Solicită o consultație personalizată<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener">Solicită consultația gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- 8 — TESTIMONIALE -->
+<!-- 8 — AICI, TU EȘTI PE PRIMUL LOC -->
+<section class="sec bg-shell" id="atentie">
+  <div class="wrap split split-5-7 flip rv" style="align-items:center">
+    <figure class="fig r-45">
+      <div class="slot" style="aspect-ratio:4/5">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M3 5h18v14H3z"/><circle cx="8.5" cy="10" r="1.5"/><path d="m3 17 5-4.5 4 3.5 3.5-3L21 18"/></svg>
+        <b>Placeholder</b>
+        <span>Fotografie Alina cu clientă</span>
+      </div>
+    </figure>
+    <div>
+      <h2>Aici, tu ești pe primul loc.</h2>
+      <div class="copy" style="margin-top:1rem">
+        <p>Lucrez cu o singură clientă la un moment dat. Nu există grabă, nu există zgomot de fond. Fiecare programare este un timp dedicat doar ție.</p>
+        <p>Îmi place să ascult, să observ și să propun soluții reale, nu promisiuni exagerate. Dacă o culoare nu se poate obține dintr-o singură ședință, îți spun de la început.</p>
+        <p>Și dacă am o recomandare diferită de ce ai văzut pe Instagram, îți explic de ce — pentru că ceea ce contează este cum arată culoarea pe părul tău, nu pe al altcuiva.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener">Solicită consultația gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 — GHID ÎNGRIJIRE PĂR -->
+<section class="sec has-motif" id="ghid">
+  <svg class="motif motif-r" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M100 8c22 34 22 68 0 102-22-34-22-68 0-102z"/><path d="M100 110v82"/><path d="M100 132c-16-18-38-24-58-18 6 20 26 32 46 28"/><path d="M100 162c16-18 38-24 58-18-6 20-26 32-46 28"/><circle cx="100" cy="58" r="13"/></svg>
+  <div class="wrap split split-5-7 rv" style="align-items:center">
+    <figure class="fig r-45">
+      <div class="slot" style="aspect-ratio:4/5">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M3 5h18v14H3z"/><circle cx="8.5" cy="10" r="1.5"/><path d="m3 17 5-4.5 4 3.5 3.5-3L21 18"/></svg>
+        <b>Placeholder</b>
+        <span>Copertă ghid îngrijire păr</span>
+      </div>
+    </figure>
+    <div>
+      <h2>Părul tău merită să își păstreze frumusețea și după vizita la salon</h2>
+      <div class="copy" style="margin-top:1rem">
+        <p>Am pregătit un mini-ghid gratuit cu recomandări simple pentru întreținerea culorii între programări.</p>
+        <p>Vei afla ce produse te ajută, ce obiceiuri să eviți și cum să păstrezi culoarea vie mai mult timp.</p>
+        <p>Îl primești gratuit la prima ta vizită în salon.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener">Solicită consultația gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 — UN LOC CREAT SPECIAL PENTRU TINE -->
+<section class="sec bg-shell" id="salon-galerie">
+  <div class="wrap">
+    <div class="rv" style="max-width:40rem">
+      <h2>Un loc creat special pentru tine</h2>
+    </div>
+    <div class="gallery rv">
+      <figure>
+        <div class="slot" style="aspect-ratio:4/3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M3 5h18v14H3z"/><circle cx="8.5" cy="10" r="1.5"/><path d="m3 17 5-4.5 4 3.5 3.5-3L21 18"/></svg>
+          <b>Placeholder</b>
+          <span>Fotografie salon 1</span>
+        </div>
+      </figure>
+      <figure>
+        <div class="slot" style="aspect-ratio:4/3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M3 5h18v14H3z"/><circle cx="8.5" cy="10" r="1.5"/><path d="m3 17 5-4.5 4 3.5 3.5-3L21 18"/></svg>
+          <b>Placeholder</b>
+          <span>Fotografie salon 2</span>
+        </div>
+      </figure>
+      <figure>
+        <div class="slot" style="aspect-ratio:4/3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M3 5h18v14H3z"/><circle cx="8.5" cy="10" r="1.5"/><path d="m3 17 5-4.5 4 3.5 3.5-3L21 18"/></svg>
+          <b>Placeholder</b>
+          <span>Fotografie salon 3</span>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 11 — TESTIMONIALE -->
 <section class="sec" id="testimoniale">
   <div class="wrap">
     <div class="rv" style="max-width:40rem">
@@ -568,7 +683,7 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
   </div>
 </section>
 
-<!-- 9 — ÎNTREBĂRI FRECVENTE -->
+<!-- 12 — ÎNTREBĂRI FRECVENTE -->
 <section class="sec bg-shell" id="intrebari">
   <div class="wrap">
     <div class="rv" style="max-width:40rem">
@@ -590,9 +705,10 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
         </div></div>
       </details>
       <details>
-        <summary><span class="qn">03</span><span class="qt">Cât durează consultația?</span><span class="ic" aria-hidden="true"></span></summary>
+        <summary><span class="qn">03</span><span class="qt">Cât durează o ședință de colorare?</span><span class="ic" aria-hidden="true"></span></summary>
         <div class="a"><div class="a-in">
-          <p>Durata consultației trebuie confirmată cu Alina. Nu este specificată în document.</p>
+          <p>Durata depinde de serviciul ales, de lungimea și densitatea părului și de complexitatea transformării.</p>
+          <p>Timpul necesar îți este comunicat în avans, după consultație.</p>
         </div></div>
       </details>
       <details>
@@ -623,29 +739,62 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
           <p>Aleg formula și tehnica potrivite pentru a obține o culoare care se menține frumoasă și îți recomand cum să o îngrijești între programări.</p>
         </div></div>
       </details>
+      <details>
+        <summary><span class="qn">08</span><span class="qt">Ce se întâmplă dacă nu sunt mulțumită de rezultat?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Înainte de orice serviciu, discutăm despre așteptările tale și îți explic ce rezultat putem obține realist. Dacă după colorare simți că ceva nu este conform, te rog să mă contactezi în cel mai scurt timp, pentru a evalua situația și a stabili pașii următori.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">09</span><span class="qt">Pot veni la consultație dacă nu sunt sigură ce vreau?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Da, tocmai acesta este scopul consultației. Nu trebuie să vii cu o decizie luată. Discutăm, analizăm părul tău și explorăm împreună opțiunile.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">10</span><span class="qt">Folosiți și alte produse în afară de NATULIQUE?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Pentru colorare, lucrez exclusiv cu NATULIQUE. Pentru îngrijire și styling, aleg produse profesionale pe care le consider potrivite pentru fiecare clientă.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">11</span><span class="qt">Pot veni la salon pentru tunsoare, fără colorare?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Da. Oferim și servicii de tunsoare și îngrijire personalizată, fără a fi necesară o ședință de colorare.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">12</span><span class="qt">Trebuie să fac ceva special înainte de prima vizită?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Nu este necesar nimic special. Te rog doar să vii cu părul nespălat de cel puțin o zi, în cazul în care urmează o colorare. Dacă ai alergii cunoscute sau ai avut reacții la colorări anterioare, este util să menționezi acest lucru.</p>
+        </div></div>
+      </details>
+      <details>
+        <summary><span class="qn">13</span><span class="qt">Unde vă găsesc și cum pot programa o vizită?</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="a"><div class="a-in">
+          <p>Salonul se află pe Bd. Mărăști nr. 35, în București. Poți programa o consultație gratuită scriindu-mi pe WhatsApp la numărul 0752 244 255.</p>
+        </div></div>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- 10 — TE AȘTEPTĂM ÎN SALON -->
+<!-- 13 — ÎNCREDEREA ÎȚI STĂ BINE -->
 <section class="sec bg-dbrown" id="salon">
   <div class="wrap split split-5-7 rv" style="align-items:center">
     <div class="fig">
       <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.5!2d26.0833!3d44.4567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU3RyLiBNxINyxINyZXN0aSAzNSwgYXAuIDIsIEJ1Y2hhcmVzdA!5e0!3m2!1sro!2sro!4v1700000000000" style="border:0;border-radius:10px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div>
-      <h2>Te așteptăm în salon</h2>
-      <p class="lead" style="margin-top:1rem">Hai să descoperim împreună ce i se potrivește părului tău.</p>
-      <div class="copy" style="margin-top:.9rem">
-        <p>Te așteptăm la Alina Cotta Beauty Lounge, într-un spațiu intim, în care fiecare clientă beneficiază de atenție deplină și de timp dedicat.</p>
-      </div>
+      <h2>Încrederea îți stă bine.</h2>
+      <p class="lead" style="margin-top:1rem">Hai să găsim împreună culoarea în care te regăsești. Scrie-mi și stabilim o consultație inițială gratuită, fără obligații.</p>
       <div style="margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid rgba(240,232,218,.18)">
         <p class="addr-l">Adresă</p>
-        <p style="margin:0;color:rgba(240,232,218,.93)">Str. Mărăști 35, ap. 2, București, România 011463</p>
+        <p style="margin:0;color:rgba(240,232,218,.93)">Bd. Mărăști nr. 35, București</p>
       </div>
       <div class="cta">
-        <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-line" id="navBtn" href="https://www.google.com/maps/search/?api=1&amp;query=Str.+Marasti+35+ap.+2+Bucharest+Romania+011463" target="_blank" rel="noopener">Vezi cum ajungi la noi</a>
+        <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener">Solicită consultația gratuită<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" id="navBtn" href="https://www.google.com/maps/search/?api=1&amp;query=Bd.+Marasti+35+Bucharest+Romania" target="_blank" rel="noopener">Vezi cum ajungi la noi</a>
       </div>
     </div>
   </div>
@@ -662,7 +811,7 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 </footer>
 
 <div class="dock" id="dock">
-  <a class="btn" href="https://wa.me/40749249785?text=Bun%C4%83%21%20A%C8%99%20dori%20s%C4%83%20programez%20o%20consulta%C8%9Bie%20gratuit%C4%83%20la%20Alina%20Cotta%20Beauty%20Lounge." target="_blank" rel="noopener">Vreau o consultație cu Alina Cotta</a>
+  <a class="btn" href="https://wa.me/40752244255?text=Bun%C4%83%2C%20Alina!%20A%C8%99%20dori%20s%C4%83%20stabilim%20o%20consulta%C8%9Bie%20ini%C8%9Bial%C4%83%20gratuit%C4%83." target="_blank" rel="noopener">Solicită consultația gratuită</a>
 </div>
 
 <script>
@@ -672,20 +821,16 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
 
   /* ---- before/after pairs: built from one source of truth ---- */
   var PAIRS = [
-    { // real client pair — the three context lines still need the salon's own wording
-      before:'img/ba1-before.jpg', after:'img/ba1-after.jpg',
+    { before:'img/ba1-before.jpg', after:'img/ba1-after.jpg',
       alt:'Aceeași clientă înainte și după: de la nuanțe calde, neuniforme, la un blond rece și uniform',
       tema:null, tehnica:null, rezultat:null },
-    { // real client pair — context lines still need the salon's own wording
-      before:'img/ba2-before.jpg', after:'img/ba2-after.jpg',
+    { before:'img/ba2-before.jpg', after:'img/ba2-after.jpg',
       alt:'Aceeași clientă înainte și după: de la rădăcini crescute cu fire albe, la o culoare aramie uniformă',
       tema:null, tehnica:null, rezultat:null },
-    { // real client pair — context lines still need the salon's own wording
-      before:'img/ba3-before.jpg', after:'img/ba3-after.jpg',
+    { before:'img/ba3-before.jpg', after:'img/ba3-after.jpg',
       alt:'Aceeași clientă înainte și după: de la rădăcini crescute și lungimi uscate, la un blond rece, luminos și bine definit',
       tema:null, tehnica:null, rezultat:null },
-    { // real client pair — context lines still need the salon's own wording
-      before:'img/ba4-before.jpg', after:'img/ba4-after.jpg',
+    { before:'img/ba4-before.jpg', after:'img/ba4-after.jpg',
       alt:'Aceeași clientă înainte și după: de la rădăcini crescute și lungimi aramii, uscate, la un balayage cald, luminos, cu valuri definite',
       tema:null, tehnica:null, rezultat:null }
   ];
@@ -698,7 +843,7 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
              (side === 'b' ? (p.alt || '') : '') + '" loading="lazy" decoding="async">';
     }
     return '<div class="ba-slot sl-' + side + '">' + PH +
-           '<b>Slot „' + tag.toLowerCase() + '”</b><span>Fotografie de adăugat</span></div>';
+           '<b>Slot „' + tag.toLowerCase() + '"</b><span>Fotografie de adăugat</span></div>';
   }
   function meta(label, value){
     return '<dt>' + label + '</dt><dd>' +
@@ -747,14 +892,12 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
     if (reduce || !('IntersectionObserver' in window)) {
       steps.forEach(function(li){ li.classList.add('in'); });
     } else {
-      // rows always arrive one after another, however they enter the viewport
       var queued = 0, lastArrival = 0;
       var sio = new IntersectionObserver(function(es){
         es.filter(function(e){ return e.isIntersecting; })
           .sort(function(a, b){ return steps.indexOf(a.target) - steps.indexOf(b.target); })
           .forEach(function(e){
             var now = Date.now();
-            // if nothing arrived recently, start immediately; otherwise fall in behind
             if (now - lastArrival > 700) queued = 0;
             var delay = queued * 175;
             queued++;
@@ -804,14 +947,14 @@ h3{font-size:clamp(1.22rem,1.1rem + .55vw,1.44rem);letter-spacing:-.01em;line-he
         var done = false;
         function go(){ if (done) return; done = true; el.removeEventListener('transitionend', go); fn(); }
         el.addEventListener('transitionend', go);
-        setTimeout(go, ms);               // guard: transitionend can be skipped
+        setTimeout(go, ms);
       }
       function shut(el){
         var p = el.querySelector('.a, .b-more');
         if (reduce){ el.open = false; p.style.height = '0px'; return; }
         p.style.transition = 'none';
         p.style.height = p.scrollHeight + 'px';
-        void p.offsetHeight;              // force reflow so the next value animates
+        void p.offsetHeight;
         p.style.transition = 'height .26s cubic-bezier(.3,.7,.3,1)';
         p.style.height = '0px';
         once(p, function(){ el.open = false; }, 320);
